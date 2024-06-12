@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="meta/docinfo.ptx" />
+
+  <book xml:id="occc-calculus-workbook">
+    <title>Workbook for OpenStax "Calculus"</title>
+
+    <xi:include href="meta/frontmatter.ptx" />
+
+<!--
+    <xi:include href="ch1/main.xml" />
+
+    <xi:include href="ch2/main.xml" />
+
+    <xi:include href="ch3/main.xml" />
+
+    <xi:include href="ch4/main.xml" />
+	
+	  <xi:include href="ch5/main.xml" />
+
+    <xi:include href="ch6/main.xml" />
+
+    <xi:include href="ch7/main.xml" />
+
+    <xi:include href="ch8/main.xml" />
+
+    <xi:include href="ch9/main.xml" />
+
+    <xi:include href="ch10/main.xml" />
+
+    <xi:include href="ch11/main.xml" />
+
+    <xi:include href="ch12/main.xml" />
+
+    <xi:include href="ch13/main.xml" />
+
+    <xi:include href="ch14/main.xml" />
+
+    <xi:include href="ch15/main.xml" />
+
+    <xi:include href="ch16/main.xml" />
+
+
+    <xi:include href="meta/backmatter.ptx" />
+-->
+
+  </book>
+</pretext>
