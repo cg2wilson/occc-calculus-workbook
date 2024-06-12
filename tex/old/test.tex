@@ -1,0 +1,185 @@
+\documentclass[12pt,twoside,letterpaper]{book}
+%PACKAGES---------------------------------------------------
+	%GENERAL THINGS/MISCELLANEOUS
+	\usepackage[utf8]{inputenc} %all hail
+	\usepackage[english]{babel} %the necessary structures
+	\usepackage{subfiles} %for modular structure
+	\usepackage{mathrsfs} %i'm really not sure
+	\usepackage{enumerate} %finer control on enumerates
+	\usepackage{nameref} %name things and reference them
+		\makeatletter
+			\newcommand*{\currentname}{\@currentlabelname}
+		\makeatother
+	\usepackage{lastpage} %allows reference of last page... is this needed?
+	\usepackage{multiaudience} %needed for instructor/student views
+	\usepackage{comment} %for debugging
+	
+	
+	%MAKE THINGS PRETTY
+	\usepackage{graphicx} %pretty things
+	\usepackage{amsmath, amsfonts, amssymb, amsthm} %math things
+	\usepackage{fancyhdr} %fancy headers
+	\usepackage[left=.75in,top=.75in,right=.75in,bottom=.75in]{geometry} %finer control on geometry of page
+		\pagestyle{fancy}
+	\usepackage{parskip} %removes indentation globally, adds space between paragraphs
+	\usepackage{linegoal} %used to fill remaining horizontal space on a page; not sure if it's needed
+	\usepackage{stmaryrd} %used for ceiling & floor function
+	\usepackage{bookmark}
+	\usepackage{etoolbox} %used to force header/footer on first page of new chapter
+		\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+		
+	%GRAPHING
+	\usepackage{pgf,tikz,pgfplots,tikz-cd}
+		\usetikzlibrary{arrows,arrows.meta,decorations.markings,decorations.pathreplacing,calc}
+		\pgfplotsset{compat=1.18}
+		\usepgfplotslibrary{fillbetween,polar}
+		
+		
+	%TABLES
+	\usepackage{multicol} %multiple columns
+	\usepackage{multirow} %multiple rows
+	\usepackage{makecell} %force line breaks in cells
+	\usepackage{tabu}	  %sometimes easier to work with
+	\usepackage{array} %Helps with tables
+		\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %Sets columns to have centered p{} columns
+
+
+	%IMAGES
+	\graphicspath{/img}
+%-----------------------------------------------------------
+
+%ENVIRONMENTS----------------------------------------------------------------------------------------
+\newcounter{ex}[section] %sets the counter for examples to reset at each section
+
+\newenvironment{ex}[1][]
+	{
+		\refstepcounter{ex}
+		\par\medskip \noindent \textbf{Example~\thesection.\theex. #1} \rmfamily
+	}
+	{
+		\medskip
+	} %defines the "example" environment, styled as **Example (Section #).(Example #)**.
+   
+\newenvironment{defn}[1][]
+	{
+		\refstepcounter{ex}
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \textbf{Definition~\thesection.\theex} (#1)} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``definition'' environment, styled as **Definition (term)**.
+
+\newenvironment{thm}[1][]
+	{
+		\refstepcounter{ex}
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \textbf{Theorem~\thesection.\theex} (#1)} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``theorem'' environment, styled as **Theorem (term)**.
+ 	  
+ \newenvironment{rmk}[1][]
+	{
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \bfseries #1} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``remark'' environment, styled as (optional argument)
+ 	 
+ 	 %%%WARNING%%%
+	%Since these environments are housed in a tabular with a *single* cell, creating internal tabulars will create problems.  I'm not really sure how to fix this right now.	
+	
+\newenvironment{question}[1][Question]
+	{
+		\refstepcounter{ex}
+		\begin{trivlist}
+			\item[\hskip \labelsep {\fbox{{\bfseries #1~\thesection.\theex}}}]
+	}
+	{
+		\end{trivlist}
+	} %defines the "question" environment, styled as Question: 
+
+\newenvironment{pf}[1][]
+	{
+		\subsubsection*{\textit{Proof #1}}
+		\vspace*{-20pt}\makebox[\textwidth]{\hrulefill}
+	}
+	{
+	} %defined the ``proof'' environment, styled as Proof (stuff)
+	
+%---------------------------------------------------------------------------------------------------------------
+
+%GENERAL COMMANDS---------------------------------------------------------------------------------	
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace} %easier for displayed braces
+\newcommand{\lrpar}[1]{\left( #1\right)} %easier for displayed parentheses
+\newcommand{\lrangle}[1]{\left\langle #1\right\rangle} %easier for displayed angle brackets
+\newcommand{\dc}{^\circ} %degree symbol
+\newcommand{\ds}{\displaystyle} %shorter \displaystyle
+\newcommand{\vs}[1]{\vspace{\stretch{#1}}} %fine control on distributing white space
+\newcommand{\blank}[1]{\rule[-.2ex]{#1 in}{.25pt}} %used for creating fill-in-the-blanks
+\newcommand{\R}{\mathbb{R}} %real numbers
+\newcommand{\Q}{\mathbb{Q}} %rational numbers
+\newcommand{\Z}{\mathbb{Z}} %integers
+\newcommand{\Nat}{\mathbb{N}} %natural numbers
+\newcommand{\newsec}{\makebox[\textwidth]{\hrulefill}} %divider between pre/in/post-class portions of workbook
+%-------------------------------------------------------------------------------------------------------
+
+%OPTIONS------------------------------------------------
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\SetNewAudience{st}
+\SetNewAudience{ins}
+\DefCurrentAudience{st}
+%\DefCurrentAudience{ins}
+%-------------------------------------------------------
+
+
+\begin{document}
+
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis x line = middle,
+    				axis y line = middle,
+    				every axis y label/.style={at={(ticklabel cs:1.1)}},
+				y label style={at={(axis description cs:.5,1.1)},anchor=north},
+    				ylabel = {$y$},
+    				every axis x label/.style= {at ={(ticklabel cs:1)}},
+    				x label style={at={(axis description cs:1.1,.5)},anchor=east},
+    				xlabel = {$x$},
+    				xtick = {-4,-3,-2,-1,1,2,3,4},
+				xmin = -5, xmax = 5,
+				ymin = -5, ymax = 5,
+				trig format plots = rad
+				]		
+				\addplot[thick,smooth, samples=100, domain=-5:.99] {x/(x-1)};
+				\addplot[thick,smooth, samples=100, domain=1.005:5] {x/(x-1)};
+				\coordinate (a) at (1,5);
+				\coordinate (b) at (1,-5);
+				\addplot[thick, dashed,domain=-5:5] {1};
+			\end{axis}
+			\draw[thick, dashed] (a)--(b);
+			
+		\end{tikzpicture}
+
+
+	
+\end{document}

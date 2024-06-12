@@ -1,0 +1,98 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\setcounter{chapter}{-1}
+	\chapter{Preliminaries}
+	%\addcontentsline{toc}{section}{Algebra Review}
+	\setcounter{section}{0}
+	\setcounter{page}{1}
+	\fancyhead[RO,LE]{\bfseries \large \nameref{csr}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Review}
+
+\section*{Review}\label{csr}
+	
+	\subsection*{Rules}
+		\begin{rmk}[Rules of Real Numbers]
+			Let \(a,b,c\) be real numbers. The following axioms hold:
+			\begin{enumerate}
+				\item (Associativity of addition): \((a + b) + c = a + (b+c)\)
+				\item (Commutativity of addition): \(a + b = b + a\)
+				\item (Additive identity): \(a + 0 = a\)
+				\item (Additive inverse): \(a + (-a) = 0\)
+				\item (Associativity of multiplication): \((ab)c = a(bc)\)
+				\item (Commutativity of multiplication): \(ab = ba\)
+				\item (Multiplicative identity): \(a\cdot 1 = a\)
+				\item (Multiplicative inverse): \(a \cdot \dfrac{1}{a} = 1\) (assuming \(a\neq 0\))
+				\item (Distributivity of multiplication): \(a(b + c) = ab + ac\)
+			\end{enumerate}
+		\end{rmk}
+		
+		\begin{rmk}[Order of Operations]
+			Operations performed should follow this order of precedence:
+			\begin{enumerate}
+				\item Grouping symbols (e.g. parentheses, brackets, braces)
+				\item Exponents
+				\item Multiplication/Division (work left to right in the expression)
+				\item Addition/Subtraction (work left to right in the expression)
+			\end{enumerate}
+		\end{rmk}
+		
+		\begin{rmk}[Fraction Operations]
+			Let \(a,b,c,d\) be real numbers. Then, \\[5pt]
+			\begin{itemize}
+				\item \(\dfrac{a}{c} \pm \dfrac{b}{d} = \dfrac{ad - bc}{cd}\) (provided \(c,d\neq 0\))
+				\item \(\dfrac{a}{c}\cdot \dfrac{b}{d} = \dfrac{ab}{cd}\) (provided \(c,d\neq 0\))
+				\item \(\dfrac{a/c}{b/d} = \dfrac{a}{c}\cdot \dfrac{d}{b}\) (provided \(c,d\neq 0\))
+				\item For any fraction of the form \(\dfrac{x}{y}\), where \(x\) has factorization \(x = a\cdot b\) and \(y\) has factorization \(y = a\cdot c\), then
+					\[\dfrac{x}{y} = \dfrac{ab}{ac} = \dfrac{b}{c}\]
+					In particular, common factors can be canceled across a fraction.			
+			\end{itemize}
+		\end{rmk}
+		\begin{rmk}[Properties of Exponents]
+			Let \(a,b >0\) be constants. For all \(x,y\), the following hold:\\[5pt]
+			\begin{enumerate}
+				\setlength{\itemsep}{10pt}
+				\item \(b^x\cdot b^y = b^{x+y}\)
+				\item \(\dfrac{b^x}{b^y} = b^{x-y}\)
+				\item \((b^x)^y = b^{xy}\)
+				\item \((ab)^x = a^xb^x\)
+				\item \(\dfrac{a^x}{b^x} = \lrpar{\dfrac{a}{b}}^x\)
+				\item \(x^{a/b} = \sqrt[b]{x^a}\)
+			\end{enumerate}
+		\end{rmk}	
+		
+		\begin{rmk}[Properties of Roots]
+			Let \(a,b\) be real numbers, and \(n\) be a positive integer. Assuming the expression is defined, the following hold:
+			\begin{enumerate}
+				\setlength{\itemsep}{10pt}
+				\item \(\sqrt[n]{ab} = \sqrt[n]{a}\cdot \sqrt[n]{b}\)
+				\item \(\sqrt[n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}\)
+			\end{enumerate}
+		\end{rmk}
+		
+		\begin{rmk}[Factoring/Expanding Binomials]
+			\begin{itemize}
+				\item \(a^2 \pm 2ab + b^2 = (a\pm b)^2\)
+				\item \((a+b)(a-b) = a^2 - b^2\)
+				\item \((x+y)(x^2 - xy + y^2) = x^3 + y^3\)
+				\item \((x-y)(x^2+xy+y^2) = x^3-y^3\)
+			\end{itemize}
+		\end{rmk}
+	
+	\subsection*{Common Mistakes}
+		The following are common mistakes made by students. \textbf{The following are explicitly false statements}.
+		\begin{enumerate}
+			\item \((a \pm b)^2  = a^2 \pm b^2\)
+			\item \(\sqrt[n]{a \pm b} = \sqrt[n]{a} \pm \sqrt[n]{b}\)
+			\item \((-a)^2 = -a^2\)
+			\item \((-a)^3 = a^3\)
+			\item \(f(x+y) = f(x) + f(y)\) for all functions
+			\item \(\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{a+b}{c+d}\)
+			\item \(\dfrac{x + y}{x + z} = \dfrac{y}{z}\)
+			
+		\end{enumerate}
+		
+\clearpage
+\end{document}

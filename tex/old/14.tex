@@ -1,0 +1,146 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{1.4 - Inverse Functions}
+	\setcounter{section}{4}
+	\fancyhead[RO,LE]{\bfseries \large \nameref{cs14}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 1.4}
+
+\section*{Inverse Functions}\label{cs14}
+	\subsection*{Inverse Functions \& Properties}
+		\begin{ex}
+			The table below gives the population \(P(t)\) of a bacterial culture, \(t\) hours after it is introduced to an agar-filled petri dish.
+			\begin{center}
+				\renewcommand{\arraystretch}{1.5}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
+					\(t\) \textbf{hours}		& 0	&1	&2	&3	&4	&5	&6	&7	&8 \\ \hline
+					\(N =P(t)\) \textbf{bacteria}	&150	&165	&182	&200	&220	&243	&267	&294	&324\\ \hline
+				\end{tabular}
+			\end{center}
+			The \emph{inverse function} \(\inv{P}(N)\), gives the time elapsed since a bacterial culture was introduced to an agar-filled petri dish, when the population is \(N\) bacteria.  This creates the table below.
+			\begin{center}
+				\renewcommand{\arraystretch}{1.5}
+				\begin{tabular}{|c|P{.4in}|P{.4in}|P{.4in}|P{.4in}|P{.4in}|P{.4in}|P{.4in}|P{.4in}|P{.4in}|}\hline
+					\(N =P(t)\) \textbf{bacteria}	&150	&165	&182	&200	&220	&243	&267	&294	&324\\ \hline
+					\(t = \inv{P}(N)\) \textbf{hours}& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline 
+
+				\end{tabular}
+			\end{center}
+		\end{ex}
+			
+		\begin{defn}[One-to-one Function]
+			A function \(f\) is said to be \textbf{one-to-one} if every output \(f(x)\) has a unique input \(x\). Mathematically,
+				\[f(x_1) = f(x_2)\iff x_1 = x_2\]
+		\end{defn}
+	
+		\begin{defn}[Inverse Function]
+			Suppose the function \(f\) is one-to-one with domain \(A\) and range \(B\). Then, its inverse function \(\inv{f}\) has domain \(B\) and range \(A\), and is defined by the equation
+				\[f(x) = y\iff \inv{f}(y) = x\]
+		\end{defn}
+		
+		\begin{ex}
+			Is \(f(x) = x^5\) one-to-one?  Why or why not?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Is \(f(x) = x^2\) one-to-one?  Why or why not?
+		\end{ex}
+			\vs{1}
+			\newpage
+		
+		\begin{rmk}[Cancellation Properties]
+			If \(f(x)\) is a one-to-one function with inverse \(\inv{f}(x)\), then
+				\[f(\inv{f}(x)) = x\]
+			and
+				\[\inv{f}(f(x)) = x\]
+		\end{rmk}
+		
+		\begin{rmk}[Notation Alert!]
+			\(\inv{f}\) is a special notation to indicate the \emph{function inverse}; you should not confuse this with the notation for the \emph{multiplicative inverse/reciprocal}, such as \(\inv{x}\).  That is, 
+			\begin{itemize}
+				\item \(\inv{f}(x)\) denotes the inverse of a function
+				\item \(\inv{x}\) denotes the multiplicative inverse of a variable, i.e. \(\inv{x} = \dfrac{1}{x}\)
+			\end{itemize}
+			The reciprocal of \(f(x)\) is written as \(\inv{[f(x)]}\).  \textbf{Notice the placement of the} \(-1\).
+		\end{rmk}
+		
+		\begin{ex}
+			Use the table below to answer the questions.  If an answer does not exist, write DNE.
+		\end{ex}\\
+		\begin{minipage}{.3\textwidth}
+			\begin{center}
+				\begin{tabular}{|c|c|c|}\hline
+					\(x\)	& \(f(x)\)& \(g(x)\)\\ \hline
+					0	& 5		& 10\\ \hline
+					1	& 8		& 7\\ \hline
+					2	& \(-1\)	& 3 \\ \hline
+					3	& 13		& 1\\ \hline
+					4	& 5		& 9\\ \hline
+					5	& 3		& \(-2\)\\ \hline
+				\end{tabular}
+			\end{center}
+		\end{minipage}
+		\begin{minipage}{.6\textwidth}
+			\begin{multicols*}{2}
+			\begin{enumerate}[(a)]
+				\setlength\itemsep{60pt}
+				\item \(\inv{g}(3)\)
+				\item \(\inv{f}(5)\)
+					\columnbreak
+				\item \(f(\inv{f}(13))\)
+				\item \((\inv{g}\circ \inv{f})(8)\)
+			\end{enumerate}
+			\end{multicols*}
+		\end{minipage}
+		\newpage
+		
+			
+		\begin{ex}
+			Find the inverse function of \(g(y) = y^3 - 3\).
+		\end{ex}
+			\vs{1}
+
+		\begin{ex}
+			If \(f(x) = x^5 + x^3 + x\), find \(\inv{f}(3)\) and \(f(\inv{f}(2))\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If \(f(x) = \dfrac{2x+1}{3-x}\), find \(\inv{f}(x)\).
+		\end{ex}
+			\vs{1.5}
+			\newpage
+			
+		\begin{ex}
+			Let \(f(x) = x^2 + 3\).
+			\begin{enumerate}[(a)]
+				\item \(f(x)\) does not have an inverse on its entire domain. Why not?
+					\vs{1}
+					
+				\item Graph \(f(x)\) on the domain \([0,\infty)\) rather than \((-\infty,\infty)\). Why does this new graph have an inverse but the original one didn't?
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{rmk}[Restricting the Domain]
+			Let \(f(x)\) be a function which is not one-to-one on domain \(A\). The process of \emph{restricting the domain} of \(f(x)\) reduces the size of the domain \(A\) so that the new graph \(\overline{f(x)}\) is one-to-one on the smaller domain \(\overline{A}\).
+		\end{rmk}	
+		
+		\begin{ex}
+			The following functions are not one-to-one on their domain, \((-\infty,\infty)\). Find a restricted domain so that the function is one-to-one.
+			\begin{enumerate}[(a)]
+				\item \(f(x) = (x-3)^2 -1\)
+					\vs{1}
+					
+				\item \(g(x) = \cos x\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		
+		
+\clearpage
+\end{document}

@@ -1,0 +1,428 @@
+\documentclass[notes]{subfiles}
+
+\begin{document}
+	\addcontentsline{toc}{section}{3.9 - Derivatives of Exponential/Logarithmic Functions}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs39}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[RO,LE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[LO,RE]{\large Chapter 3.9}
+	
+\section*{Derivatives of Exponential/Logarithmic Functions}\label{cs39}
+	\subsection*{Before Class}
+	\subsubsection*{Exponential Functions}
+		\begin{defn}[Exponential Function]
+			An \textbf{exponential function} is a function of the form \blank{2.5}, where \(b\) is a positive constant.
+		\end{defn}
+		
+		\begin{rmk}[Properties of Exponential Functions]
+			Let \(f(x) = b^x\).  Then, \(f(x)\) has the following properties:\\ \\
+			\begin{itemize}
+				\setlength\itemsep{25pt}
+				\item Domain: \blank{1.75}
+				\item Range: \blank{1.75}
+				\item If \blank{2}, then \(f(x)\) is increasing
+				\item If \blank{2}, then \(f(x)\) is decreasing
+				\item \(\ds\lim_{x\to \infty} f(x) = \begin{cases}\blank{.75}& \text{if } \blank{1.5}\\ & \\ \blank{.75}& \text{if } \blank{1.5} \end{cases}\)
+				\item \(\ds\lim_{x\to -\infty} f(x) =\begin{cases}\blank{.75}& \text{if } \blank{1.5}\\ & \\ \blank{.75}& \text{if } \blank{1.5} \end{cases}\) 	
+			\end{itemize}
+		\end{rmk}
+			\newpage
+			
+		\begin{defn}[Euler's Constant (\(e\))]
+			\(e\) is defined to be the number for which \(\ds \lim_{h\to 0} \dfrac{e^h-1}{h} = 1\)
+		\end{defn}
+	
+	\subsubsection*{Logarithmic Functions}
+		\begin{defn}[Logarithmic Function]
+			Let \(y = b^x\).  The inverse of this exponential function, called a \textbf{logarithmic function}, is\\[20pt] defined using the relationship \blank{3}.
+		\end{defn}
+		
+		\begin{ex}
+			Find the following:
+			\begin{enumerate}[(a)]
+				\item \(\log_4(16)\)
+					\vs{.5}
+					
+				\item \(\log_{10} (0.01)\)
+					\vs{.5}
+					
+				\item \(\log_3 (243)\)
+					\vs{.5}
+					
+				\item \(\log_5 (-5)\)
+					\vs{.5}
+			\end{enumerate}
+		\end{ex}
+	
+		\begin{rmk}[Cancellation Properties]
+			\begin{itemize}
+				\setlength\itemsep{30pt}
+				\item \(\log_b (b^x) =\) \blank{3}
+				\item \(b^{\log_b(x)} = \) \blank{3}
+			\end{itemize}
+		\end{rmk}
+			\newpage
+			
+		\begin{rmk}[Properties of Logarithmic Functions]
+			Let \(f(x) = \log_b(x)\).  Then, \(f(x)\) has the following properties:\\ \\
+			\begin{itemize}
+				\setlength\itemsep{25pt}
+				\item Domain: \blank{1.75} 
+				\item Range: \blank{1.75}
+				\item If \blank{2}, then $f(x)$ is increasing
+				\item If \blank{2}, then $f(x)$ is decreasing
+				\item \(\ds\lim_{x\to \infty} f(x) = \begin{cases}\blank{.75}& \text{if } \blank{1.5}\\ & \\ \blank{.75}& \text{if } \blank{1.5} \end{cases}\)
+				\item \(\ds\lim_{x\to 0^+} f(x) = \begin{cases}\blank{.75}& \text{if } \blank{1.5}\\ & \\ \blank{.75}& \text{if } \blank{1.5} \end{cases}\)
+			\end{itemize}
+		\end{rmk}
+		
+		\begin{rmk}[Logarithm Rules]
+			For \(x,y>0\) and \(r\in \R\), the following properties hold:\\ \\
+			\begin{itemize}
+				\setlength\itemsep{15pt}
+				\item \(\log_b(xy) = \)\blank{2.5}
+				\item \(\log_b\lrpar{\dfrac{x}{y}} = \)\blank{2.5}
+				\item \(\log_b(x^r) = \)\blank{2.5}
+			\end{itemize}
+		\end{rmk}
+			\newpage
+			
+		\begin{defn}[The Natural Logarithm]
+			The \textbf{natural logarithm} is the logarithm with base $e$.  $\log_e(x)$ is written as $\ln x$.
+		\end{defn}
+			
+		\begin{ex}
+			Use the rules of logarithms to write the following as a single logarithm:
+			\begin{enumerate}[(a)]
+				\item \(2\log_3(x) + 3\log_3(y) - \log_3(z)\)
+					\vs{1}
+					
+				\item \(\log_2(160) + \log_2(10)\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Use the rules of logarithms to expand the given quantity:
+			\begin{enumerate}[(a)]
+				\item \(\log_9 (\sqrt[3]{ab})\)
+					\vs{1}
+					
+				\item \(\ln\lrpar{\lrpar{\dfrac{x+2}{x-1}}^2}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+		\begin{ex}
+			Solve the equation \(\ln x + \ln (x-1) = 1\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{rmk}[Change of Base Formula]
+			For any positive number \(b\) (\(b\neq 1\)), we have
+				\[\]
+		\end{rmk}
+		
+		\begin{ex}
+			Write the logarithm \(\log_3(7)\) in terms of the natural logarithm.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Use the change of base formula to write \(\dfrac{1}{\log_8(6)}\) as a single logarithm.
+		\end{ex}
+			\vs{1}
+		
+		\newpage
+		
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Find the domain of the function:
+			\begin{enumerate}[(a)]
+				\item \(f(x) = \dfrac{1-e^{x^2}}{1-e^{4-x^2}}\)
+					\vs{1}
+					
+				\item \(g(x) = \dfrac{1+x}{3^{\sin x}}\)
+					\vs{1}
+					
+				\item \(h(t) = \sqrt{4^t - 16}\)
+					\vs{1}
+			\end{enumerate}	
+		\end{ex}
+		
+		\begin{ex}
+			Find the domain of \(y =  \log_2(x^2 +3x)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the exact value of the expression:
+			\begin{enumerate}[(a)]	
+				\item \(\log_2 (32)\)
+					\vs{1}
+					
+				\item \(\log_{1.5} (2.25)\)
+					\vs{1}
+					
+				\item \(\log_8(60)-\log_8(3) - \log_8(5)\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Can \(\log_b(x) + \log_c(y)\) be written as a single logarithm? Why or why not?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{In Class}
+	\subsubsection*{Calculus of Exponentials and \(\ln x\)}	
+		\begin{rmk}[Derivative of an Exponential (First Attempt)]
+			If \(f(x) = b^x\), then \(f'(x) = f'(0)b^x\)
+		\end{rmk}
+		\begin{pf}
+			\vs{2}
+		\end{pf}
+		
+		This means we have the following interpretation of \(f(x) = e^x\):
+		\begin{rmk}[Special Meaning of \(e\)]
+			\(f(x) = e^x\) is the unique exponential function whose tangent line at the point \((0,1)\) is exactly 1, i.e. \(f'(0) = 1\).
+		\end{rmk}
+		
+		\begin{rmk}[Derivative of \(e^x\)]
+			\[\dfrac{d}{dx}\left[e^x\right] = \]
+		\end{rmk}
+			\newpage
+			
+		\begin{ex}
+			Find the derivative of the function:
+			\begin{enumerate}[(a)]
+				\item \(f(x) = e^4\)
+					\vs{1}
+					
+				\item \(g(r) = e^r + r^e\)
+					\vs{1}
+					
+				\item \(f(x) = \dfrac{e^x}{1+e^x}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{rmk}[Derivative of \(\ln x\)]
+			\[\dfrac{d}{dx}[\ln x] =\qquad\qquad\qquad \]
+		\end{rmk}
+		
+		\begin{pf}
+			\vspace{2.5in}
+		\end{pf}
+		
+		\begin{ex}
+			Find the derivative of \(f(x) = \ln (x^2-5)\).
+		\end{ex}
+			\vs{1}
+			\newpage
+	
+		\begin{ex}
+			Find the derivative of \(\ln (\cos x)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the derivative of \(\ln \lrpar{\dfrac{x-2}{\sqrt{x+1}}}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Argue why $\dfrac{d}{dx} (\ln |x|) = \dfrac{1}{x}$
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsubsection*{Examples}
+		\begin{ex}
+			Find the equation of the tangent line to the curve \(y = xe^x\) at the point \((1,e)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Compute \(f'(x)\), if \(f(x) = e^{\tan x}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Compute \(f'(x)\), if \(f(x) = \tan (e^x)\)
+		\end{ex}
+			\vs{1}
+			
+			\newpage
+			
+		\begin{ex}
+			Find \(\dfrac{dy}{dx}\), if \(e^{x/y} = y - x\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If\(f(x) = 3 + x + e^x\), find \((\inv{f})'(4)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Evaluate \(\ds \lim_{x\to \pi} \dfrac{e^{\sin x} - 1}{x-\pi}\)
+		\end{ex}
+			\vs{1}
+			
+			\newpage
+			
+		\begin{ex}
+		Find the derivative:
+			\begin{enumerate}[(a)]
+				\item \(f(x) = x\ln x - x\)
+					\vs{1}
+					
+				\item \(g(x) = \ln (\sin^2x)\)
+					\vs{1}
+					
+				\item \(y = \dfrac{1}{\ln x}\)
+					\vs{1}
+					
+				\item \(h(t) = \ln(t + \sqrt{t^2-1})\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+	\subsubsection*{General Logs and Exponentials}
+		\begin{rmk}[Derivative of General Logarithms]
+			\[\dfrac{d}{dx}\lrpar{\log_b x} = \qquad \qquad \qquad\]
+		\end{rmk}
+		
+		\begin{pf}
+			\vs{.75}
+		\end{pf}
+		
+		\begin{ex}
+			Find \(\dfrac{d}{dx} [\log_7(2-\cos x)]\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the derivative of \(g(x) = \sqrt{1+\log x}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the derivative of \(f(x) = \log_3(x\log_4x)\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{rmk}[Derivative of Exponential Functions]
+			\[\dfrac{d}{dx} \lrpar{b^x} = \qquad\qquad\qquad\]
+		\end{rmk}
+		
+		\begin{ex}
+			Find \(\dfrac{d}{dx}\lrpar{5^{x^3}}\)
+		\end{ex}	
+			\vs{1}
+			
+		\begin{ex}
+			Compute the derivative of \(f(x) = 3^{\cos 2x}\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsubsection*{Logarithmic Differentiation}
+
+		\begin{ex}
+			Find the derivative of the function \(f(x) = \dfrac{x^{2/3}\sqrt{x^2+1}}{(2x-1)^6}\)
+		\end{ex}	
+			\vs{1}
+		
+		\begin{rmk}[Logarithmic Differentiation]
+			\begin{enumerate}
+				\setlength\itemsep{30pt}
+				\item 
+				\item 
+				\item 
+			\end{enumerate}
+		\end{rmk}
+			\newpage
+			
+		\begin{ex}
+			Briefly explain why logarithmic differentiation is ideal for differentiating \(y = \dfrac{e^{-x}\cos^2x}{x^2+x+1}\), then compute the derivative.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Use logarithmic differentiation to find the derivative of \(y = x^{\sqrt{x}}\)
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Find the derivative of \(y = (\cos x)^x\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{After Class Practice}	
+		\begin{ex}
+			Find \(y'\) if \(y = e^{-6x}\cos(2x)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the second derivative of \(y = xe^{-x}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Compute the derivatives:
+			\begin{enumerate}[(a)]
+				\item \(y = x^2e^{-1/x}\)
+					\vs{1}
+					
+				\item \(g(x) = e^{x^2-x}\)
+					\vs{1}
+					
+				\item \(f(t) = \sqrt{1+te^{-2t}}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+		\begin{ex}
+			Show that the function \(y = e^x + e^{-x/2}\) satisfies the differential equation \(2y'' - y' - y = 0\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Compute the derivative for the function given:
+			\begin{enumerate}[(a)]
+				\item \(f(x) = x^4 + 4^x\)
+					\vs{1}
+					
+				\item \(k(z) = 6^z\log_6z\)
+					\vs{1}
+					
+				\item \(y = \ln (\csc x - \cot x\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+		\begin{ex}
+			Let \(f(x) = \log_b(3x^2-2)\). For what value of \(b\) is \(f'(1) =3\)?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Compute \(\dfrac{d}{dx}[x^{\sin x}]\)
+		\end{ex}
+			\vs{1}
+			
+		
+	\clearpage
+\end{document}

@@ -1,0 +1,156 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{4.7 - Applied Optimization}
+	\setcounter{section}{6}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs47}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 4.7}
+	
+\section*{Applied Optimization}\label{cs47}
+	\subsection*{Before Class}
+	\subsubsection*{The Idea}
+		Rather than go straight into optimization, we'll give some motivation for the process first, as well as connect it to material we have already learned.
+		\begin{ex}
+			Consider the function \(f(x) = -x^2 + 6x + 11\).
+			\begin{enumerate}[(a)]
+				\item Find the critical point of \(f(x)\); give your answer as an ordered pair.
+					\vs{1}
+					
+				\item Sketch the graph of \(f(x)\) to visually confirm your answer from (a).
+					\vs{1}
+					
+				\item Now suppose that \(f(x)\) gives the profit (in hundred dollars) that a company makes from a certain product, when \(x\) thousand units are sold.  The critical point you found in (a) has a physical meaning now; what is it?
+					\vs{.5}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+		
+		In the previous example, you were given the function for profit.  More often than not, however, you will need to develop the formula for yourself.  		
+		\begin{ex}
+			 A farmer has 2400 ft of fencing and wants to fence off a rectangular field that borders a straight river.  He needs no fence along the river.  What are the dimensions of the field with the largest area?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{rmk}[Strategy for Optimization]
+			\begin{enumerate}[(1)]
+			\setlength\itemsep{55pt}
+				\item 
+				\item 
+				\item 
+				\item 
+				\item
+			\end{enumerate}\\ \\
+		\end{rmk}
+		
+		The key to optimization problems is \textsc{\textbf{practice}}.  Many optimization problems follow a similar pattern, and require only slight modification from other problems.  Practice is the only way that one will learn and recognize these patterns and tricks.
+		\newpage
+		
+		\begin{ex}
+			A cylindrical can is to hold 1 L of oil.  Find the dimensions that will minimize the cost of the metal to manufacture the can.
+		\end{ex}
+			\vs{1}
+			
+			
+		\begin{ex}
+			Find the point on the parabola \(y^2 = 2x\) that is closest to the point \((1,4)\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Find two numbers whose difference is 150 and whose product is a minimum.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			The sum of two positive numbers is 20.  What is the smallest possible value of the sum of their squares?
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			What is the maximum vertical distance between the line \(y=x+2\) and the parabola \(y=x^2\) for \(-1\leq x\leq 2\)?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{In Class}	
+	\subsubsection*{Examples}
+		\begin{ex}
+			A woman launches her boat from point \(A\) on a bank of a straight river, 3 miles wide, and wants to reach point \(B\), 8 miles downstream on the opposite bank, as quickly as possible.  She could: row her boat directly across the river to point \(C\) and run to point \(B\); row directly to \(B\); or, row to some intermediate point \(D\) and run to \(B\).  She can can row 5 mi/h and run 6 mi/h; where should she land in order to reach \(B\) as soon as possible?
+		\end{ex}
+			\vs{2}
+			
+		\begin{ex}
+			Find the area of the largest rectangle which can be inscribed in a semicircle of radius \(r\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			A box with a square base and open top must have a volume of 32,000 cm\(^3\).  Find the dimensions of the box that minimize the amount of material used.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A rectangular storage container with an open top is to have a volume of 10 m\(^3\).  The length of its base is twice the width.  Material for the base costs \$10 per square meter.  Material for the sides costs \$6 per square meter.  Find the cost of materials for the cheapest such container.
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Find the area of the largest rectangle that can be inscribed in the ellipse \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2} = 1\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A right circular cylinder is inscribed in a sphere of radius \(r\).  Find the largest possible volume of such a cylinder.
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			A poster is to have an area of 180 in\(^2\) with 1-inch margins at the bottom and sides, and a 2-inch margin at the top.  What dimensions will give the largest printed area?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If the two equal sides of an isosceles triangle have length \(a\), find the length of the third side that maximizes the area of the triangle.
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			A rain gutter is to be constructed from a metal sheet of width 30 cm by bending up one-third of the sheet on each side through an angle \(\theta\).  How should \(\theta\) be chosen so that the gutter will carry the maximum amount of water?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A farmer with 1000 feet of fencing wants to enclose a rectangular area, and divide it into four pens with fencing parallel to one side of the rectangle.  What is the largest possible total area of the four pens?
+		\end{ex}
+			\vs{1}
+			\newpage
+
+	\subsection*{After Class Practice}			
+		\begin{ex}
+			Find the point on the curve \(y = \sqrt{x}\) that is closest to the point \((4,0)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A piece of wire 10 inches long is cut into two pieces.  One piece is bent into a square, and the other is bent into an equilateral triangle.  How should the wire be cut so that the total area enclosed is (a) maximized? (b) minimized?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Find an equation of the line through the point \((5,3)\) that cuts off the least area from quadrant one.
+		\end{ex}	
+			\vs{1}
+	
+\clearpage
+\end{document}

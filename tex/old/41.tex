@@ -1,0 +1,151 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\chapter{Applications of Derivatives}
+	\addcontentsline{toc}{section}{4.1 - Related Rates}
+	\setcounter{section}{1}
+	\fancyhead[RO,LE]{\bfseries \large \nameref{cs41}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 4.1}
+
+\section*{Related Rates}\label{cs41}
+	\subsection*{Before Class}
+	\subsubsection*{Functions of Time}
+		\begin{ex}
+			\begin{enumerate}[(a)]
+				\item Think about the equation \(x^2 + y^2 = 64\).  Is this an implicit or explicit equation?  Why?
+					\vs{.5}
+					
+				\item To find the derivative of both sides of the equation, we think of \(y\) as a function of \(x\), i.e. \(``y\text{''} = y(x)\).  This is so that we can use which differentiation rule?  Find the derivative, \(\dfrac{dy}{dx}\).
+					\vs{1}
+					
+				\item Now think of $x$ as a function of \(y\), i.e. \(``x\text{''} =x(y)\).  Find the derivative, \(\dfrac{dx}{dy}\).  
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			\begin{enumerate}[(a)]
+				\item Now assume that \(y\) is a function of \(t\), i.e. \(``y\text{''} = y(t)\).  Find \(\dfrac{dy}{dt}\) if we have the relationship \(y^2 = t\).
+					\vs{1}
+					\newpage
+					
+				\item Reconsider \(x^2 + y^2 = 64\).  If both \(x\) and \(y\) are functions of \(t\), i.e. \(``x\text{''} =x(t)\) and \(``y\text{''} =y(t)\), then take the derivative of both sides of the equation.
+					\vs{1}
+					
+				\item Solve part (b) for \(\dfrac{dy}{dt}\).
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Consider the equation \(V = \dfrac{1}{3}\pi r^2 h\).
+			\begin{enumerate}[(a)]
+				\item If \(r\) is a function of \(t\) and \(h\) is a \emph{constant}, find an expression for \(\dfrac{dV}{dt}\).
+					\vs{1}
+					
+				\item If \(h\) is a function of \(t\) and \(r\) is a \emph{constant}, find an expression for \(\dfrac{dV}{dt}\).
+					\vs{1}
+					
+				\item If both \(r\) and \(h\) are functions of \(t\), find an expression for \(\dfrac{dV}{dt}\).
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Find \(\dfrac{dP}{dt}\) if \(P = 2x+2y\), and write an explanation as if you were explaining to a friend.
+			\vs{1}
+		\end{ex}
+		
+		\begin{ex}
+			Compute \(\dfrac{dA}{dt}\), if \(A = xy\). What makes the computation different than the previous example?
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Compute \(\dfrac{dV}{dt}\), if \(V = xyz\). What makes this computation different than the previous example?
+		\end{ex}
+			\newpage
+			
+	\subsection*{In Class}
+	\subsubsection*{Related Rates}
+		\begin{ex}
+			Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 100 cm\(^3\)/s.  How fast is the radius of the balloon increasing when the diameter is 50cm?
+		\end{ex}
+			\vs{1}
+			
+		\begin{rmk}[Steps for Solving Related Rates Problems]
+			
+			\begin{enumerate}
+			\setlength\itemsep{25pt}
+				\item 
+				\item 
+				\item 
+				\item 
+				\item
+			\end{enumerate}
+		\end{rmk}
+			\newpage
+			
+		\begin{ex}
+			A 10-foot ladder rests along a vertical wall.  If the bottom of the ladder slides away from the wall at a rate of 1 ft/s, how fast is the top of the ladder sliding down the wall when the bottom of the ladder is 6 ft from the wall?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A 10-foot ladder rests along a vertical wall.  If the bottom of the ladder slides away from the wall at a rate of 1 ft/s, how fast is the angle between the wall and the ladder changing at the moment when the bottom of the ladder is 5ft from the wall?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			A conical water tank has a base radius of 3 m and height 6 m.  If water is being pumped into the tank at a rate of 2 m$^3$/min, find the rate at which the water level is rising when the water is 3 m deep.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A Toyota Camry is traveling west at 50 mi/h and a Ford Focus is traveling north at 65 mi/h.  Both cars are heading for the intersection of the two roads.  At what rate are the cars approaching each other when the Camry is 0.4 mi and the Focus is 0.3 mi from the intersection?
+		\end{ex}
+			\vs{.5}
+			\newpage
+			
+		\begin{ex}
+			A plane flying horizontally at an altitude of 1 mi and speed of 500 mi/h passes directly over a radar station.  Find the rate at which the distance from the plane to the station is increasing when it is 2 mi away from the station.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			A boat is pulled into a dock by a rope attached to the bow of the boat and passing through a pulley on the dock that is 1 m higher than the bow of the boat.  If the rope is pulled in at a rate of 1 m/s, how fast is the boat approaching the dock when it is 8 m from the dock?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			A particle moves along the curve \(y = 2\sin\lrpar{\dfrac{\pi x}{2}}\).  As the particle passes through the point \(\lrpar{\dfrac{1}{3},1}\), its \(x-\)coordinate increases at a rate of \(\sqrt{10}\) cm/s.  How fast is the distance from the particle to the origin changing at this instant?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Gravel is being dumped from a conveyor belt at a rate of 30 ft\(^3\)/min, and forms a pile in the shape of a cone whose base diameter and height are always equal.  How fast is the height of the pile increasing when the pile is 10 ft high?
+		\end{ex}
+			\vs{.5}
+			\newpage
+			
+	\subsection*{After Class Practice}
+		\begin{ex}
+			Two sides of a triangle have lengths 12 m and 15 m.  The angle between them is increasing at a rate of \(2\dc\)/min.  How fast is the length of the third side increasing when the angle between the sides of fixed length is \(60\dc\)?
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Two carts \(A\) and \(B\) are connected by a rope 39 ft long that passes over a pulley \(P\).  The point \(Q\) is on the floor 12 ft directly beneath \(P\) and between the carts.  Cart \(A\) is being pulled away from \(Q\) at a speed of 2 ft/s.  How fast is cart \(B\) moving toward \(Q\) at the instant when cart \(A\) is 5 ft from \(Q\)?
+		\end{ex}		
+			\vs{1.5}
+			\newpage
+\clearpage
+\end{document}

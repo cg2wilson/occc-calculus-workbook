@@ -1,0 +1,313 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{3.7 - Derivatives of Inverse Functions}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs37}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 3.7}
+	
+\section*{Derivatives of Inverse Functions}\label{cs37}			
+	\subsection*{Before Class}
+	\subsubsection*{Review: Inverse Functions}
+		\begin{rmk}[Information about Inverse Functions]
+			If you feel you need a refresher on the basics of inverse functions, please look back at \S1.4
+		\end{rmk}
+		
+	\subsubsection*{Calculus of Inverse Functions}
+		\begin{rmk}[Continuity of Inverses]
+			If \(f\) is a one-to-one continuous function defined on the interval \(I\), then \blank{1.5}\\[15pt] \blank{5}.
+		\end{rmk}
+		
+		\begin{question}
+			If a one-to-one function \(f\) is differentiable on the interval \(I\), is it necessarily true\\[5pt] that \(\inv{f}\) is also differentiable?  
+		\end{question}
+			\vs{1}
+			\newpage
+			
+		\begin{rmk}[Derivative of Inverses]
+			If \(f\) is a one-to-one, differentiable function at \(x = a\) with inverse function \(\inv{f}\) and \\[15pt] \blank{2}, then the inverse function is differentiable at \(a\) and \\ \\ \\ \\
+		\end{rmk}
+		
+		\begin{pf}
+		
+		\end{pf}
+			\vs{2}
+			
+		\begin{ex}
+			Let \(f(x) = 3x - \sin x\).  Find \((\inv{f})'(0)\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+			
+		\begin{ex}
+			Let \(g(x) = \sqrt{x-2}\) and \(a = 2\).  
+			\begin{enumerate}[(a)]
+				\item Show that \(g\) is one-to-one.
+					\vs{1}
+					
+				\item Find \((\inv{g})'(a)\) using the formula above.
+					\vs{1}
+					
+				\item Find \((\inv{g})'(x)\), and give its domain and range.
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+	\subsubsection*{Inverse Trig Functions}
+		\begin{ex}
+			Let \(f(x) = \sin x\).
+			\begin{enumerate}[(a)]
+				\item Graph \(\sin x\) on the interval \([-2\pi,2\pi]\).
+					\vs{1}
+					
+				\item Identify an interval on which \(\sin x\) could possess an inverse.
+					\vs{.5}
+				
+				\item Sketch the graph of the inverse function.
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{rmk}[Inverse Sine (Arcsine)]
+			The function \(y = \sin x\) has the inverse \(x = \inv{\sin}y\) (also written \(\arcsin y\)).  The domain of \\[20pt] \(\inv{\sin}y\) is \blank{2} and the range is \blank{2.5}.
+		\end{rmk}
+		\newpage
+		
+		\begin{ex}
+			Evaluate \(\inv{\sin}\lrpar{\dfrac{\sqrt{2}}{2}}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Evaluate \(\tan\lrpar{\arcsin \dfrac{1}{4}}\)
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Let \(f(x) = \cos x\).
+			\begin{enumerate}[(a)]
+				\item Graph \(\cos x\) on \([-2\pi, 2\pi]\)
+					\vs{1}
+					
+				\item Identify an interval on which \(\cos x\) could possess an inverse.
+					\vs{.5}
+					
+				\item Sketch the graph of the inverse function.
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}	
+		\newpage
+		
+		\begin{rmk}[Inverse Cosine (Arccosine)]
+			The function \(y = \cos x\) has the inverse \(x = \inv{\cos}y\) (also written \(\arccos y\)).  The domain of \\[20pt] \(\inv{\cos} y\) is \blank{2} and the range is \blank{2.5}.
+		\end{rmk}
+		
+		\begin{ex}
+			Repeat the process we used for sine and cosine to find an inverse function for tangent.  Sketch the graph of the inverse function.
+		\end{ex}
+			\vs{1}
+			
+		\begin{rmk}[Inverse Tangent (Arctangent)]
+			The function \(y = \tan x\) has the inverse \(x = \inv{\tan}y\) (also written \(\arctan y\)).  The domain of \\[20pt] \(\inv{\tan}y\) is \blank{2} and the range is \blank{2.5}.  
+		\end{rmk}
+		
+		\begin{ex}
+			Simplify the expression \(\tan\lrpar{\arccos x}\).
+		\end{ex}
+			\vs{.5}
+			
+		\begin{ex}
+			Using the sketch of arctangent from above, compute \(\ds\lim_{x\to \infty} \arctan x\) and \(\ds\lim_{x\to -\infty} \arctan x\).
+		\end{ex}
+			\vs{.5}
+			\newpage
+			
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Evaluate the following:
+			\begin{enumerate}[(a)]
+				\item \(\inv{\tan}(\sqrt{3})\)
+					\vs{.5}
+					
+				\item \(\inv{\cos}\lrpar{\dfrac{\sqrt{3}}{2}}\)
+					\vs{.5}
+					
+				\item \(\tan\lrpar{\arcsin\lrpar{\dfrac{2}{3}}}\)
+					\vs{1}
+					
+				\item \(\cos\lrpar{2\inv{\sin}\lrpar{\dfrac{5}{13}}}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}	
+		
+		\begin{ex}
+			Simplify the expressions:
+			\begin{enumerate}[(a)]
+				\item \(\tan \lrpar{\inv{\sin}(x)}\)
+					\vs{1}
+					
+				\item \(\cos\lrpar{\inv{\sin}(x)}\)
+					\vs{1}
+					
+				\item \(\sin (2\arccos x)\)
+					\vs{1}
+			\end{enumerate}	
+		\end{ex}
+		\newpage
+			
+		
+	\subsection*{In Class}
+		\subsection*{Examples}
+		
+		\begin{ex}
+			For \(f(x) = x+\sqrt{x}\), find \((\inv{f})'(2)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Suppose \(\inv{f}\) is the inverse function of a differentiable function \(f\) with \(f(4) = 5\) and \(f'(4) = \dfrac{2}{3}\).  Find \((\inv{f})'(5)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Let \(h(x) = 2x^2-8x\).
+			\begin{enumerate}[(a)]
+				\item \(h(x)\) is not one-to-one.  Sketch it and determine an interval on which it can be made one-to-one.  This is called the \emph{restricted domain}.
+					\vs{1}
+					\newpage
+					
+				\item Complete the square on \(h(x)\) and use it to find the inverse function on your restricted domain.
+					\vs{1}
+					
+				\item Find \((\inv{h})'(x)\) using your answer in (b).
+					\vs{1}
+
+			\end{enumerate}
+		\end{ex}
+			
+		\begin{ex}
+			Find \((\inv{f})'(a)\) for the given functions:
+			\begin{enumerate}[(a)]
+				\item \(f(x) = 3x^3 + 4x^2 + 6x + 5\), \(a = 5\)
+					\vs{1}
+					
+				\item \(f(x) = \sqrt{x^3+4x+4}\),\(a = 3\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+
+	\subsubsection*{Derivatives of Inverse Trig Functions}
+
+			\begin{center}
+				\tabulinesep = 4mm
+				\setlength\arrayrulewidth{1.5pt}
+				\begin{tabu}{|X[c] | X[c] | X[c]|}\hline
+					\multicolumn{3}{|c|}{\large \bfseries Properties of Inverse Trig Functions}\\ \hline
+					\textbf{Function}	& \textbf{Domain}	& \textbf{Range} \\ \hline
+					\(\inv{\sin}(x)\)		& \([-1,1]\)			& \(\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]\)\\ \hline
+					\(\inv{\cos}(x)\)		& \([-1,1]\)			& \([0,\pi]\)\\ \hline
+					\(\inv{\tan}(x)\)		& \((-\infty,\infty)\)		& \(\left[-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right]\) \\ \hline
+					\(\inv{\cot}(x)\)		& \((-\infty,\infty)\)		& \((0,\pi)\)\\ \hline
+					\(\inv{\sec}(x)\)		& \((-\infty,-1)\cup (1,\infty)\)	& \(\left[0,\dfrac{\pi}{2}\right)\cup \left[\pi, \dfrac{3\pi}{2}\right)\)\\ \hline
+					\(\inv{\csc}(x)\)		& \((-\infty,-1)\cup (1,\infty)\)	& \(\left(0,\dfrac{\pi}{2}\right]\cup \left(\pi, \dfrac{3\pi}{2}\right]\)\\ \hline
+				\end{tabu}
+			\end{center}
+
+		
+		\begin{ex}
+			Show that \(\dfrac{d}{dx}\left[\inv{\sin}(x)\right] = \dfrac{1}{\sqrt{1-x^2}}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Use the same process to find the derivative of \(\inv{\cos}(x)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Again, use the same process to find the derivative of \(\inv{\tan}(x)\).
+		\end{ex}
+			\vs{1}
+			
+		The table below collects the derivatives of the six inverse trig functions:
+
+			\begin{center}
+				\tabulinesep = 2mm
+				\setlength\arrayrulewidth{1.5pt}
+				\begin{tabu}to .8\textwidth {| X[.75,c] | X[1.25c] || X[.75,c] | X[1.25,c] |}\hline
+					\multicolumn{4}{|c|}{\large \bfseries Derivatives of Inverse Trig Functions}\\ \hline
+					\textbf{Function}	& \textbf{Derivative}	& \textbf{Function}	& \textbf{Derivative} \\ \hline
+									&					&					& \\
+					\(\inv{\sin}(x)\)				&					& \(\inv{\csc}(x)\)				& \\
+									&					&					& \\ \hline
+									&					&					& \\
+					\(\inv{\cos}(x)\)			&					& \(\inv{\sec}(x)\)			& \\
+									&					&					& \\ \hline
+									&					&					& \\
+					\(\inv{\tan}(x)\)			&					& \(\inv{\cot}(x)\)			& \\
+									&					&					& \\ \hline
+
+				\end{tabu}
+			\end{center}
+			\newpage
+			
+		\begin{ex}
+			Find the domain of the function \(y = \arcsin(x^2-4)\).  Then, find its derivative, and the domain of the derivative.
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Find the derivative of \(f(x) = x\arccos(\sqrt{x})\)
+		\end{ex}	
+			\vs{1}
+			
+		\begin{ex}
+			Write the derivative of \(f(x) = \dfrac{1}{\inv{\tan}(x)}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+	
+	\subsection*{After Class Practice}
+		\begin{ex}
+			Find the derivatives:
+			\begin{enumerate}[(a)]
+				\item \(\lrpar{\inv{\tan}(x)}^2\)
+					\vs{1}
+					
+				\item \(\inv{\cot}(t) + \inv{\cot}\lrpar{\dfrac{1}{t}}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}	
+
+		\begin{ex}
+			Find \((\inv{f})'(2)\) for \(f(x) = x^3 + 3\sin x + 2\cos x\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Suppose that \(\inv{f}\) is the inverse function of a differentiable function \(f\), and let \(G(x) = \dfrac{1}{\inv{f}(x)}\). If \(f(3) = 2\) and \(f'(3) = \dfrac{1}{9}\), find \(G'(2)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If \(g(x) = x\inv{\sin}\lrpar{\dfrac{x}{4}} +\sqrt{16-x^2}\), find \(g'(2)\).
+		\end{ex}
+			\vs{1.5}
+			
+		\begin{ex}
+			Find an equation of the tangent line to the curve \(y = 3\arccos\lrpar{\dfrac{x}{2}}\) at the point \((1,\pi)\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	
+\clearpage
+\end{document}

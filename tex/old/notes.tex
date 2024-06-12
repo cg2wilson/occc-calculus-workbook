@@ -1,0 +1,210 @@
+\documentclass[12pt,twoside,letterpaper]{book}
+%PACKAGES---------------------------------------------------
+	%GENERAL THINGS/MISCELLANEOUS
+	\usepackage[utf8]{inputenc} %all hail
+	\usepackage[english]{babel} %the necessary structures
+	\usepackage{subfiles} %for modular structure
+	\usepackage{mathrsfs} %i'm really not sure
+	\usepackage{enumerate} %finer control on enumerates
+	\usepackage{nameref} %name things and reference them
+		\makeatletter
+			\newcommand*{\currentname}{\@currentlabelname}
+		\makeatother
+	\usepackage{lastpage} %allows reference of last page... is this needed?
+	\usepackage{multiaudience} %needed for instructor/student views
+	\usepackage{comment} %for debugging
+	
+	
+	%MAKE THINGS PRETTY
+	\usepackage{graphicx} %pretty things
+	\usepackage{amsmath, amsfonts, amssymb, amsthm} %math things
+	\usepackage{fancyhdr} %fancy headers
+	\usepackage[left=.75in,top=.75in,right=.75in,bottom=.75in]{geometry} %finer control on geometry of page
+		\pagestyle{fancy}
+	\usepackage{parskip} %removes indentation globally, adds space between paragraphs
+	\usepackage{linegoal} %used to fill remaining horizontal space on a page; not sure if it's needed
+	\usepackage{stmaryrd} %used for ceiling & floor function
+	\usepackage{bookmark}
+	\usepackage{etoolbox} %used to force header/footer on first page of new chapter
+		\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+		
+	%GRAPHING
+	\usepackage{pgf,tikz,pgfplots,tikz-cd}
+		\usetikzlibrary{arrows,arrows.meta,decorations.markings,decorations.pathreplacing,calc}
+		\pgfplotsset{compat=1.15}
+		\usepgfplotslibrary{fillbetween}
+		
+		
+	%TABLES
+	\usepackage{multicol} %multiple columns
+	\usepackage{multirow} %multiple rows
+	\usepackage{makecell} %force line breaks in cells
+	\usepackage{tabu}	  %sometimes easier to work with
+	\usepackage{array} %Helps with tables
+		\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %Sets columns to have centered p{} columns
+
+
+	%IMAGES
+	\graphicspath{/img}
+%-----------------------------------------------------------
+
+%ENVIRONMENTS----------------------------------------------------------------------------------------
+\newcounter{ex}[section] %sets the counter for examples to reset at each section
+
+\newenvironment{ex}[1][]
+	{
+		\refstepcounter{ex}
+		\par\medskip \noindent \textbf{Example~\thesection.\theex. #1} \rmfamily
+	}
+	{
+		\medskip
+	} %defines the "example" environment, styled as **Example (Section #).(Example #)**.
+   
+\newenvironment{defn}[1][]
+	{
+		\refstepcounter{ex}
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \textbf{Definition~\thesection.\theex} (#1)} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``definition'' environment, styled as **Definition (term)**.
+
+\newenvironment{thm}[1][]
+	{
+		\refstepcounter{ex}
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \textbf{Theorem~\thesection.\theex} (#1)} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``theorem'' environment, styled as **Theorem (term)**.
+ 	  
+ \newenvironment{rmk}[1][]
+	{
+ 		\begin{flushleft}
+ 		\setlength{\arrayrulewidth}{1.5pt}
+ 		\begin{tabular}{|p{.95\textwidth}|}\hline \\ 
+ 			{\large \bfseries #1} \\ \\ 
+	}
+ 	{
+	 	\\  \\
+	 	\hline\end{tabular}
+	 	\end{flushleft}
+	 	\vspace*{.2in}
+ 	 } %defines the ``remark'' environment, styled as (optional argument)
+ 	 
+ 	 %%%WARNING%%%
+	%Since these environments are housed in a tabular with a *single* cell, creating internal tabulars will create problems.  I'm not really sure how to fix this right now.	
+	
+\newenvironment{question}[1][Question]
+	{
+		\refstepcounter{ex}
+		\begin{trivlist}
+			\item[\hskip \labelsep {\fbox{{\bfseries #1~\thesection.\theex}}}]
+	}
+	{
+		\end{trivlist}
+	} %defines the "question" environment, styled as Question: 
+
+\newenvironment{pf}[1][]
+	{
+		\subsubsection*{\textit{Proof #1}}
+		\vspace*{-20pt}\makebox[\textwidth]{\hrulefill}
+	}
+	{
+	} %defined the ``proof'' environment, styled as Proof (stuff)
+	
+%---------------------------------------------------------------------------------------------------------------
+
+%GENERAL COMMANDS---------------------------------------------------------------------------------	
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace} %easier for displayed braces
+\newcommand{\lrpar}[1]{\left( #1\right)} %easier for displayed parentheses
+\newcommand{\lrangle}[1]{\left\langle #1\right\rangle} %easier for displayed angle brackets
+\newcommand{\dc}{^\circ} %degree symbol
+\newcommand{\ds}{\displaystyle} %shorter \displaystyle
+\newcommand{\vs}[1]{\vspace{\stretch{#1}}} %fine control on distributing white space
+\newcommand{\blank}[1]{\rule[-.2ex]{#1 in}{.25pt}} %used for creating fill-in-the-blanks
+\newcommand{\R}{\mathbb{R}} %real numbers
+\newcommand{\Q}{\mathbb{Q}} %rational numbers
+\newcommand{\Z}{\mathbb{Z}} %integers
+\newcommand{\Nat}{\mathbb{N}} %natural numbers
+\newcommand{\newsec}{\makebox[\textwidth]{\hrulefill}} %divider between pre/in/post-class portions of workbook
+\newcommand{\inv}[1]{#1^{-1}} %shortcut for writing inverse functions
+%-------------------------------------------------------------------------------------------------------
+
+%OPTIONS------------------------------------------------
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\SetNewAudience{st}
+\SetNewAudience{ins}
+\DefCurrentAudience{st}
+%\DefCurrentAudience{ins}
+\makeatletter %code below modifies placement of TOC title
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\vspace{-50pt}\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+\makeatother
+%-------------------------------------------------------
+
+
+\begin{document}
+	\subfile{title.tex}\newpage
+		
+	\tableofcontents
+		\thispagestyle{empty}
+		\addtocontents{toc}{\vspace*{-15pt}}\newpage\thispagestyle{empty}
+		
+		
+
+	\subfile{review.tex}\newpage
+	\subfile{11.tex}\newpage
+	\subfile{12.tex}\newpage
+	\subfile{13.tex}\newpage
+	\subfile{14.tex}\newpage
+	\subfile{22.tex}\newpage
+	\subfile{23.tex}\newpage
+	\subfile{24.tex}\newpage
+	\subfile{31.tex}\newpage
+	\subfile{32.tex}\newpage
+	\subfile{33.tex}\newpage
+	\subfile{35.tex}\newpage
+	\subfile{36.tex}\newpage
+	\subfile{37.tex}\newpage
+	\subfile{38.tex}\newpage
+	\subfile{39.tex}\newpage
+	\subfile{41.tex}\newpage
+	\subfile{43.tex}\newpage
+	\subfile{45.tex}\newpage
+	\subfile{47.tex}\newpage
+	\subfile{48.tex}\newpage
+	\subfile{410.tex}\newpage
+	\subfile{51.tex}\newpage
+	\subfile{52.tex}\newpage
+	\subfile{53.tex}\newpage
+	\subfile{55.tex}\newpage
+	\subfile{56.tex}\newpage
+	\subfile{61.tex}
+
+	
+\end{document}

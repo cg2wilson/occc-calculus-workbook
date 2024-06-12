@@ -1,0 +1,172 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{3.5 - Derivatives of Trigonometric Functions}
+	\setcounter{section}{4}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs35}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 3.5}
+	
+\section*{Derivatives of Trigonometric Functions}\label{cs35}
+	\subsection*{Before Class}
+	\subsubsection*{Special Trig Limits}
+		There are two limits of trigonometric functions that we will take advantage of in \S3.5.  
+		\begin{rmk}[Two Important Limits]
+			\[\ds \lim_{\theta\to 0} \dfrac{\sin \theta}{\theta} = 1\qquad\text{ and }\qquad \ds \lim_{\theta\to 0} \dfrac{\cos \theta - 1}{\theta} = 0\]
+		\end{rmk}
+		\begin{pf}
+			
+		\end{pf}
+			\newpage
+
+	\subsubsection*{Derivative of Sine/Cosine}
+		\begin{ex}
+			Use the limits above to show that \(\dfrac{d}{d\theta}\left[\sin \theta\right] = \cos \theta\).
+		\end{ex}	
+			\vs{1.5}
+	
+		\begin{ex}
+			Find the derivative of \(f(\theta) = \cos \theta\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsubsection*{Other Trig Derivatives}
+		\begin{ex}
+			Find the derivatives of the following functions using the rules from \S3.3 and the definition of the remaining four functions:
+			\begin{enumerate}[(a)]
+				\item \(\tan x\)
+					\vs{1}
+					
+				\item \(\cot x\)
+					\vs{1}
+					
+				\item \(\sec x\)
+					\vs{1}
+					
+				\item \(\csc x\)
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+			\newpage
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Find \(f'(x)\), if \(f(x) = x^3\cos x\).
+		\end{ex}
+			\vs{1.5}
+			
+		\begin{ex}
+			Find the equation of the tangent line to the curve \(y = 2\sin x - \cos x\) at the point \((0,-1)\).
+		\end{ex}
+			\vs{1}
+
+		\begin{ex}
+			Find the equation of the tangent line and normal line to the curve \(y=(1+x)\sin x\) at the point \((0,0)\)
+		\end{ex}
+			\vs{1}
+
+		\begin{ex}
+			Find the derivative of the function \(k(x) = \dfrac{1+\tan x}{\sin x}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+	
+	\subsection*{In Class}
+	\subsubsection*{Trig Derivatives}
+			\begin{center}
+				{
+				\setlength{\arrayrulewidth}{1.5pt}
+				\tabulinesep = 3mm
+				\begin{tabu}{| X[c] | X[c] | X[c] | X[c] |} \hline
+					\multicolumn{4}{|c|}{\textbf{\large Derivatives of Trigonometric Functions}} \\ \hline
+						&&& \\
+					$\dfrac{d}{dx}[\sin x]$ &  & $\dfrac{d}{dx}[\csc x]$ & \\
+						&&& \\
+					$\dfrac{d}{dx}[\cos x]$ &  & $\dfrac{d}{dx}[\sec x]$ & \\
+						&&& \\
+					$\dfrac{d}{dx}[\tan x]$ &  & $\dfrac{d}{dx}[\cot x]$ & \\
+						&&&\\ \hline
+				\end{tabu}				
+				}
+			\end{center}
+			
+		\begin{ex}
+			For what values of \(x\) does \(f(x) = \dfrac{\cos x}{1-\sin x}\) have a horizontal tangent?
+		\end{ex}
+			\vs{1}
+			\newpage
+
+		\begin{ex}
+			An object at the end of a vertical spring is stretched 5 in beyond its resting position, and released at time \(t = 0\).  Its position at time \(t\) is given by \(s(t) = 5\sin t\).
+			\begin{enumerate}[(a)]
+				\item Find the velocity and acceleration at time \(t\)
+					\vs{.5}
+					
+				\item Graph position, velocity, and acceleration together on the interval \([0,2\pi]\). Discuss what the graph of \(v(t)\) tells you about \(s(t)\), and what \(a(t)\) tells you about \(v(t)\) and \(s(t)\).
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+
+		\begin{ex}
+			Differentiate \(y = u(a\cos u + b\cot u)\), where \(a,b\) are constants.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Differentiate \(y = x^2\sin x\sec x\)
+		\end{ex}	
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Find the derivative of \(y = \dfrac{t\csc t}{1+t}\)
+		\end{ex}	
+			\vs{1}
+			
+			
+		\begin{ex}
+			Find the 101st derivative of \(f(x) = 2\cos x\).
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Find the 99th derivative of \(f(x) = \sin x\)
+		\end{ex}	
+			\vs{1}		
+			
+		\begin{ex}
+			Find the equation of the tangent line to the curve \(f(x) = x+\tan x\) at the point \((\pi,\pi)\).  
+		\end{ex}	
+			\vs{1}
+			\newpage
+
+		\begin{ex}
+			Suppose \(f(\pi/3) = 4\), and \(f'(\pi/3) = -2\).  Let \(g(x) = f(x)\sin x\) and \(h(x) = \dfrac{\cos x}{f(x)}\).  Find \(g'(\pi/3)\) and \(h'(\pi/3)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find \(\dfrac{d^{35}}{dx^{35}} (x\sin x)\)
+		\end{ex}
+			\vs{1}
+			\newpage
+				
+	\subsubsection*{After Class Practice}
+		\begin{ex}
+			Find constants \(A\) and \(B\) so that, for \(y = A\sin x + B\cos x\), the following holds:
+				\[y'' + y' - 2y = \sin x\]
+			\emph{Hint}: If \(y = A\sin x + B\cos x\), then \(y' = A\cos x - B\sin x\), and \(y'' = -A\sin x - B\cos x\).  
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the points on the curve \(y = \dfrac{\cos x}{2 + \sin x}\) where the graph has a horizontal tangent.
+		\end{ex}
+			\vs{1}
+
+\clearpage
+\end{document}

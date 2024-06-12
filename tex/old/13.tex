@@ -1,0 +1,212 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{1.3 - Trigonometric Functions}
+	\setcounter{section}{3}
+	\fancyhead[RO,LE]{\bfseries \large \nameref{cs13}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 1.3}
+
+\section*{Trigonometric Functions}\label{cs13}
+	\subsection*{Definitions/Properties}
+		\begin{center}
+			\setlength{\arrayrulewidth}{1.5pt}
+			\renewcommand{\arraystretch}{2}	
+	 		\begin{tabular}{| ccc | c |} \hline
+	 			\multicolumn{4}{|c|}{\large{\textbf{Basic Trigonometric Functions}}}\\ \hline
+	 			\(\sin x = \dfrac{\text{opp}}{\text{hyp}}\) & \(\cos x = \dfrac{\text{adj}}{\text{hyp}}\) & \(\tan x = \dfrac{\text{opp}}{\text{adj}} \)	& \\
+	 			&&&
+	 			\multirow{3}{*}{
+	 				\begin{tikzpicture}[scale = .9]
+ 						\coordinate (one) at (0,0);
+ 						\coordinate (two) at (4,3); 
+ 						\coordinate (three) at (4,0);
+						\draw (one)--(two) node[midway, yshift = 9pt, sloped] {hyp};
+						\draw (two)--(three) node[midway, xshift = 14pt, yshift = -6pt] {opp};
+						\draw (three)--(one) node[midway, yshift = -9pt] {adj};
+						\draw (.75,0) node[yshift = 5pt] {$x$};
+					\end{tikzpicture}
+					} \\ & & & \\
+				$\csc x = \dfrac{\text{hyp}}{\text{opp}}$ & $\sec x = \dfrac{\text{hyp}}{\text{adj}}$ & $\cot x = \dfrac{\text{adj}}{\text{opp}}$ & \\
+				&&& \\ \hline
+	 		\end{tabular}
+		\end{center}
+		
+		\begin{rmk}[IMPORTANT NOTE]
+			Trigonometric functions are \emph{functions}, and always require an input (an angle). In particular, an expression like
+				\[\cos (x) = \dfrac{1}{3}\]
+			is appropriate, while 
+				\[\cos = \dfrac{1}{3}\]
+			is \textbf{inappropriate}.
+		\end{rmk}
+		
+		\begin{center}
+				\setlength{\arrayrulewidth}{1.5pt}
+				\renewcommand{\arraystretch}{2}
+				\begin{tabular}{| c | c | c | c | c | c | c | } \cline{2-7}
+					\multicolumn{1}{c|}{} & \multicolumn{6}{c|}{{\large \textbf{Properties of Trig Functions}}}\\ \cline{2-7}
+					\multicolumn{1}{c|}{} & \(\sin x\) 		& \(\cos x\) 			& \(\tan x\) 											& \(\cot x\) 							& \(\sec x\) 											  & \(\csc x\) \\ \hline
+					& &&&&&\\[-20pt]
+					\textbf{Domain}		& \((-\infty,\infty)\)& \((-\infty,\infty)$	& \makecell{\(x\neq \dfrac{\pi}{2} + \pi k\) \\ \(k\in \Z\)}	& \makecell{\(x\neq \pi k\)\\ \(k\in \Z\)} 	& \makecell{\(x\neq \dfrac{\pi}{2} + \pi k\) \\ \(k\in \Z\)} & \makecell{\(x\neq \pi k\)\\ \(k\in \Z\)} \\ \hline
+					\textbf{Range}		& $[-1,1]$		& $[-1,1]$ 			& $(-\infty,\infty)$									& $(-\infty,\infty)$					& \makecell{$(-\infty,-1]\cup $\\ $[1,\infty)$}							  &  \makecell{$(-\infty,-1]\cup $\\ $[1,\infty)$} \\ \hline
+					\textbf{Period}& $2\pi$ & $2\pi$ & $\pi$ & $\pi$ & $2\pi$ & $2\pi$ \\ \hline
+				\end{tabular}
+			\end{center}
+			\newpage
+	\subsection*{Radian Measure}
+		\begin{defn}[Radians]
+			A \textbf{radian} is defined to be the angle required to make the length of an arc on the circle the same length as the radius of the circle.
+		\end{defn}
+		\begin{rmk}[Converting Between Degrees and Radians]
+			\qquad \qquad \qquad \(\pi\) radians \( = 180\dc\)  \qquad	\(1\dc = \dfrac{\pi}{180}\) radians \qquad 1 radian \(= \dfrac{180\dc}{\pi}\)
+		\end{rmk}
+		
+		\begin{ex}
+			Convert \(\dfrac{\pi}{45}\) radians into degrees, and convert \(215\dc\) into radians.
+		\end{ex}
+			\vs{1}
+
+	\subsection*{Arc Length and Sector Area}
+		\begin{rmk}[Arc Length]
+			The length of an arc \(s\) of a circle of radius \(r\) is given by
+				\[s = r\theta\]
+			where \(\theta\) is the inscribed angle \emph{in radians}
+		\end{rmk}
+		
+		\begin{rmk}[Area of a Sector]
+			The area \(A\) of a sector of a circle of radius \(r\) is given by
+				\[A = \dfrac{1}{2}r^2\theta\]
+			where \(\theta\) is the inscribed angle \emph{in radians}
+		\end{rmk}
+			\newpage
+			
+		\begin{ex}
+			Find the area for a sector of a circle of radius 4 with an inscribed angle of \(60\dc\).
+		\end{ex}
+			\vs{1}
+			
+	\subsection*{Unit Circle}
+		Knowing the values of the unit circle will make your life much easier; fill it out below.
+
+			\begin{tikzpicture}[scale=5.3,cap=round,>=latex]
+			        % draw the coordinates
+			        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {\(x\)};
+			        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {\(y\)};
+			
+			        % draw the unit circle
+			        \draw[thick] (0cm,0cm) circle(1cm);
+			
+			        \foreach \x in {0,30,...,360} {
+			                % lines from center to point
+			                \draw[gray] (0cm,0cm) -- (\x:1cm);
+			                % dots at each point
+			                \filldraw[black] (\x:1cm) circle(0.4pt);
+			                % draw each angle in degrees
+					\fill[white] (\x:0.4cm) circle (0.12);
+			        }
+			        
+			        \foreach \x in {45,135,225,315} {
+			        	% lines from center to point
+			                \draw[gray] (0cm,0cm) -- (\x:1cm);
+			                % dots at each point
+			                \filldraw[black] (\x:1cm) circle(0.4pt);
+			                % draw each angle in degrees
+					\fill[white] (\x:0.4cm) circle (0.12);
+			        }
+			
+			        % draw each angle in radians
+			        \foreach \x/\xtext in {
+			            30/\frac{\pi}{6},
+			            45/\frac{\pi}{4},
+			            60/\frac{\pi}{3},
+			            90/\frac{\pi}{2},
+			            120/\frac{2\pi}{3},
+			            135/\frac{3\pi}{4},
+			            150/\frac{5\pi}{6},
+			            180/\pi,
+			            210/\frac{7\pi}{6},
+			            225/\frac{5\pi}{4},
+			            240/\frac{4\pi}{3},
+			            270/\frac{3\pi}{2},
+			            300/\frac{5\pi}{3},
+			            315/\frac{7\pi}{4},
+			            330/\frac{11\pi}{6},
+			            360/2\pi}
+			                \fill[white] (\x:0.8cm) circle (0.12);
+
+				\foreach \x/\xtext/\y in {
+			            % the coordinates for the first quadrant
+	    			    30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+			     		45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+			            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+			            % the coordinates for the second quadrant
+			            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+			            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+			            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+			            % the coordinates for the third quadrant
+			            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+			            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+			            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+			            % the coordinates for the fourth quadrant
+			            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+			            315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+			            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+			                \draw (\x:1.25cm) node[fill=white] {};
+			
+			        % draw the horizontal and vertical coordinates
+			        % the placement is better this way
+			        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+			              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+			              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+			              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+	   	 \end{tikzpicture}
+		\newpage
+	\subsection*{Identities}
+		\begin{center}
+			\setlength{\arrayrulewidth}{1.5pt}
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{|c|c|} \hline
+				{\large \textbf{Quotient Identities}} & {\large \textbf{Reciprocal Identities}}\\ \hline
+				& \\[-15pt]
+				\(\tan x = \dfrac{\sin x}{\cos x}\) & \(\csc x = \dfrac{1}{\sin x}\) \\[15pt]
+				\(\cot x = \dfrac{\cos x}{\sin x}\) & \(\sec x = \dfrac{1}{\cos x}\) \\[15pt]
+										& \(\cot x = \dfrac{1}{\tan x}\) \\[15pt] \hline
+			\end{tabular}
+		\end{center}
+			
+		\begin{center}
+			\setlength{\arrayrulewidth}{1.5pt}
+			\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{|c|c|} \hline
+				{\large \textbf{Double Angle Identities}} & {\large \textbf{Pythagorean Identities}} \\ \hline
+				& \\[-15pt]
+				\(\sin (2x) = 2\sin x\cos x\) & \(\sin^2 x + \cos^2 x =1 \) \\ 
+				\(\cos (2x) = 2\cos^2x - 1\) & \(1 + \cot^2 x = \csc^2x\) \\
+				\(\cos (2x) = 1-2\sin^2x\) & \(\tan^2 x + 1 = \sec^2 x\) \\
+				\(\cos (2x) = \cos^2x-\sin^2x\) & \\ \hline
+			\end{tabular}
+		\end{center}
+	\subsection*{Trig Equations}
+		\begin{rmk}[Solving Trig Equations]
+			Solving equations involving trigonometric functions is similar in process to solving polynomial functions. Three things must be kept in mind:
+			\begin{itemize}
+				\item A trigonometric function \textbf{must} be of the form: \(\text{trig}\,(x)\)
+				\item The range of the function in question.
+				\item The interval(s) involved in the question.
+			\end{itemize}
+		\end{rmk}
+			\newpage
+			
+		\begin{ex}
+			Solve the equation \(\cos^2x - 2\cos x + 1 = 0\) on the interval \([0,4\pi)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Solve the equation \(\sin (3x) = \dfrac{1}{2}\) on the interval \([0,2\pi)\) and in general.
+		\end{ex}
+			\vs{1}
+		
+\clearpage
+\end{document}

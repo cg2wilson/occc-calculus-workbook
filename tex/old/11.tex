@@ -1,0 +1,568 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\chapter{Algebra \& Trig Review}
+	\addcontentsline{toc}{section}{1.1 - Review of Functions}
+	\setcounter{section}{1}
+	\fancyhead[RO,LE]{\bfseries \large \nameref{cs11}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 1.1}
+
+\section*{Functions}\label{cs11}
+	
+	\subsection*{Basics}
+		\begin{defn}[Relation/Domain/Range]
+			A \textbf{relation} is a collection of ordered pairs of the form \((x,y)\). The collection of first components in a relation is called the \textbf{domain} of the relation. The collection of second components in a relation is called the \textbf{range} of the relation.
+		\end{defn}
+		
+		\begin{defn}[Input/Output]
+			In an ordered pair \((x,y)\), the element \(x\) is called an \textbf{input} and the element \(y\) is called an \textbf{output}. 
+		\end{defn}
+		
+		\begin{defn}[Function]
+			A \textbf{function} \(f\) is a rule which assigns to each input \(x\) in the domain a single output \(f(x)\) in the range.
+		\end{defn}
+		
+		\begin{ex}
+			The relation \(f\) is copied below. Is \(f\) a function? Why or why not?
+			\[\lrbrace{(-2,1), (1,5), (0,-3), (-2,3), (10,1), (3,3)}\]
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{defn}[Graph]
+			The \textbf{graph} of a function is the collection of all coordinate pairs \((x,y)\), plotted on a coordinate system.
+		\end{defn}
+			\vs{1}
+		
+		\begin{thm}[Vertical Line Test]
+			A relation is a function if and only if any vertical intersects the graph of the relation in \emph{at most} one point.
+		\end{thm}
+	
+		\begin{ex}
+			Are both of these graphs functions?  Why or why not?
+			\begin{center}
+				\begin{tabular}{lr}
+					\begin{tikzpicture}
+						\begin{axis}[
+						axis x line = middle,
+	    						axis y line = middle,
+	    					every axis y label/.style={at={(ticklabel cs:1.1)}},
+							y label style={at={(axis description cs:0,1.1)},anchor=north},
+	    					ylabel = {$y$},
+	    						every axis x label/.style= {at ={(ticklabel cs:1)}},
+	    						x label style={at={(axis description cs:1.1,.48)},anchor=east},
+	    						xlabel = {$x$},
+						trig format plots = rad,
+						xmin = 0, xmax = 6.5,
+						ymin = -1.5, ymax = 1.5
+						]
+						\addplot[thick, smooth, domain = 0:2*pi] {cos(x)};
+						\end{axis}
+					\end{tikzpicture}
+				&
+					\begin{tikzpicture}
+	  	  				\begin{axis}[
+	    						axis x line = middle,
+	    						axis y line = middle,
+	    					every axis y label/.style={at={(ticklabel cs:1.1)}},
+							y label style={at={(axis description cs:.5,1.1)},anchor=north},
+	    					ylabel = {$y$},
+	    						every axis x label/.style= {at ={(ticklabel cs:1)}},
+	    						x label style={at={(axis description cs:1.1,.65)},anchor=east},
+	    						xlabel = {$x$},
+							xmin=-4.5,xmax=4.5,
+	       			    		ymin=-9.5,ymax=4.5,
+			       		    xtick = {-4,-2,2,4},
+	    		   		    ytick = {-8,-6,-4,-2,2,4},
+	        		    	]
+	        			    \addplot [domain=-3:3,samples=50]({x^3-3*x},{3*x^2-9}); 
+	   				 \end{axis}
+					\end{tikzpicture}
+				\end{tabular}
+			\end{center}
+		\end{ex}
+			\vs{1}
+	
+		\begin{ex} 
+			Below are numerical expressions for the relations $h$ and $k$.  Is $h$ a function?  What about $k$?
+			\begin{center}
+				{\renewcommand{\arraystretch}{1.2}
+				\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+					$x$ & 0 & 1 & 1 & 2 & 5 & 6 \\ \hline
+					$h(x)$ & 0& 1 & 2 & 3 & 4 & 5 \\ \hline
+				\end{tabular}\hspace*{15pt}
+				\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+						$t$ & 0 & 1 & 1 & 2 & 5 & 6 \\ \hline
+						$k(t)$ & 0 & 1 & 1 & 3 & 4 & 5 \\ \hline
+					\end{tabular}
+				}
+				\end{center}
+		\end{ex}	
+			\vs{1}
+			\newpage
+			
+	\subsection*{Using Functions}
+		\begin{rmk}[Function Notation: Functions of a Single Variable]
+			The notation \(f(x)\) has two pieces: input and rule. We are applying the \emph{rule} we call \(f\) to the \emph{input} we call \(x\). The result is an output, usually denoted \(y\). So we can write
+			\[y = f(x)\]
+			as a way to say ``the output \(y\) is the result of applying the rule \(f\) to the input \(x\)''. You want to read this as ``\(y\) equals \(f\) of \(x\)''.
+		\end{rmk}
+
+		\begin{rmk}[Evaluating Functions]
+			To evaluate a function \(f(x)\), replace all instances of the variable \(x\) with the input shown.
+		\end{rmk}
+
+		\begin{ex}
+			Let \(f(x) = x^2 + 5\). Evaluate the following:
+			\begin{multicols}{2}
+				\begin{enumerate}[(a)]
+					\item \(f(1)\)
+						\vspace*{35pt}
+
+					\item \(f(0)\)
+						\vspace*{35pt}
+
+					\item \(f(-2)\)
+						\vspace*{35pt}
+
+					\item \(f(a)\)
+						\vspace*{35pt}
+
+					\item \(f(x + h)\)
+						\vspace*{35pt}
+				\end{enumerate}
+			\end{multicols}
+		\end{ex}
+
+		\begin{ex}
+			Consider the following function rules: \(f(x) = x-1, g(x) = -x^2, h(x) = 2^x\). Write the function notation for the descriptions given, then compute.
+			\begin{enumerate}[(a)]
+				\item \(f\) applied to the input 5
+					\vs{1}
+					\newpage
+
+				\item \(g\) applied to the input \(a + 1\)
+					\vs{1}
+
+				\item \(h\) applied to the input \(3 + r\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}	
+		
+	\subsection*{Combining Functions}
+		Functions can be combined using the operations addition, subtraction, multiplication, and division. The notation is given below.
+		\begin{center}
+			\begin{tabular}{cccc}
+				\textbf{Name} & \textbf{Notation} & \textbf{Translation} & \textbf{Note}\\
+				\emph{Sum} & \((f+g)(x)\) & \(f(x) + g(x)\) & \\
+				\emph{Difference} & \((f-g)(x)\) & \(f(x) - g(x)\) & \\
+				\emph{Product} & \((f\cdot g)(x)\) & \(f(x)\cdot g(x)\) & \(f\cdot g\) can be written as \(fg\) as well \\
+				\emph{Quotient} & \(\lrpar{\dfrac{f}{g}}(x)\) & \(\dfrac{f(x)}{g(x)}\) & \(g(x)\neq 0\)
+			\end{tabular}
+		\end{center}	
+		
+		\begin{ex}
+			Let \(f(x) = 3x - 1\) and \(g(x) = x^2 + x +1\). Write and simplify the following:
+			\begin{enumerate}[(a)]
+				\item \((f+g)(x)\)
+					\vs{1}
+					
+				\item \((f-g)(x)\)
+					\vs{1}
+					
+				\item \((fg)(x)\)
+					\vs{1}
+					
+				\item \(\lrpar{\dfrac{f}{g}}(x)\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+		
+		Functions can also be combined using \emph{composition}: using one function as an input to another. This notation is given by
+			\[(f\circ g)(x) = f(g(x))\]	
+		\begin{ex}
+			Let \(f(x) = 3x - 1\) and \(g(x) = x^2 + x +1\). Write and simplify the following:
+			\begin{enumerate}[(a)]
+				\item \((f\circ g)(x)\)
+					\vs{1}
+					
+				\item \((g\circ f)(x)\)
+					\vs{1}
+					
+				\item \(g(-4x)\)
+					\vs{1}
+					
+				\item \(f(g(-x))\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{rmk}[Domain/Range of a Composition]
+			Given two functions \(f(x)\) and \(g(x)\), the composition \((f\circ g)(x)\) has the domain
+				\[\text{Dom}\,(f\circ g) = \lrbrace{x\mid x\in \text{Dom}\,(g) \text{ and } g(x)\in \text{Dom}\, (f)}\]
+			and range
+				\[\text{Range}\, (f\circ g) = \lrbrace{y = f(x) \mid x\in \text{Range}\, (g) }\]
+		\end{rmk}
+		
+		\begin{ex}
+			Consider the functions \(f\) and \(g\) given below.
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline
+					\(x\) & \(-3\) & \(-2\) & \(-1\) & \(0\) & \(1\) & \(2\) & \(3\) & \(4\) \\ \hline
+					\(f(x)\) & \(0\) & \(4\) & \(2\) &\(4\) & \(-2\) & \(0\) & \(-2\) & \(4\) \\ \hline
+				\end{tabular}
+				\begin{tabular}{|c|c|c|c|c|c|}\hline
+					\(x\) & \(-4\) & \(-2\) & \(0\) & \(2\) & \(4\) \\ \hline
+					\(g(x)\) & \(1\) & \(0\) & \(3\) & \(0\) & \(5\) \\ \hline
+				\end{tabular}
+			\end{center}
+			Find the following:
+			\begin{enumerate}[(a)]
+				\item \((g\circ f)(3)\)
+					\vs{1}
+					
+				\item The domain and range of \((g\circ f)(x)\)
+					\vs{1}
+					
+				\item The domain and range of \((f\circ g)(x)\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+	\subsection*{Symmetry}
+		\begin{defn}[Even/Odd Function]
+			A function \(f(x)\) is said to be \textbf{even} if it has the property that
+				\[f(-x) = f(x)\]
+			for all \(x\) in its domain. A function is said to be \textbf{odd} if it has the property that
+				\[f(-x) = -f(x)\]
+			for all \(x\) in its domain.
+		\end{defn}
+		
+		\begin{ex}
+			Determine if the following functions ar even, odd, or neither.
+			\begin{enumerate}[(a)]
+				\item \(f(x) = x^7 + x^5 - x\)
+					\vs{1}
+					
+				\item \(g(x) = 3-x^2\)
+					\vs{1}
+					
+				\item \(h(x) = x^2 - x^3\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			
+\clearpage
+\end{document}
+
+		\begin{defn}[Piecewise Function]
+			A \textbf{piecewise function} is a function defined by different formulas in different parts of their domains.
+		\end{defn}
+						
+		\begin{ex}
+			A quick example of a piecewise function is the \emph{absolute value function}: 
+				\[f(x) = |x| = \begin{cases}-x & x < 0 \\x & x \geq 0  \end{cases}\]
+				
+			\begin{enumerate}[(a)]
+				\item What is \(f(-5)\)? What about \(f(1)\)?
+					\vs{.5}
+					
+				\item What is \(f(0)\)?  Why?
+					\vs{.5}
+					
+				\item Sketch \(|x|\) on the interval \(-5\leq x \leq 5\).
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+		
+		\begin{ex}
+			A function \(h\) is defined by \(h(x) = \begin{cases}3-x & x< 2\\ x^2+x & x \geq 2 \end{cases}\)
+			\begin{enumerate}[(a)]
+				\item Evaluate \(h(-2)\), \(h(3)\), and \(h(2)\).
+					\vs{1}
+
+					
+				\item Sketch the graph of\(h\)
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+			
+		\begin{ex}
+			Write the absolute value function \(f(x) = |2x-3|\) as a piecewise function
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{rmk}[Function Composition]
+			Given two function \(f\) and \(g\), the \textbf{composite function} \(f\circ g\) is defined by \\[20pt]
+			The domain of \(f\circ g\) is \blank{5}.
+		\end{rmk}
+		
+		\begin{ex}
+			For each function below, (1) find the domain of the composite function, (2) completely decompose the function into smaller ones.
+			\begin{enumerate}[(a)]
+				\item \(f(x) = \dfrac{1}{x+2}\)
+					\vs{1}
+
+				\item  \(q(x) = (2x+1)^5\)	
+					\vs{1}
+						
+				\item  \(s(h) = \sin \left(5h^2 + \dfrac{1}{h}\right)\)		
+					\vs{1}
+					
+				\item  \(y(r) = \dfrac{5.317}{(2r^5 + 1.7)^2}\)		
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+		\begin{ex}
+			If \(f(x) = \sqrt{x}\) and \(g(x) = \sqrt{2-x}\), find and simplify
+				\begin{enumerate}[(a)]
+					\item \(f\circ g\)
+						\vs{1}
+						
+					\item \(g\circ f\)
+						\vs{1}
+						
+					\item \(f\circ f\)
+						\vs{1}
+						
+					\item \(g\circ g\)
+						\vs{1}
+				\end{enumerate}
+		\end{ex}
+			
+		\begin{ex}
+			Let \(k(x) = \sec(x^2)\tan(x^2)\).  Find \(f,g\) such that \(k(x) = f(g(x))\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Let \(f(x) = \cos^2 (x^2 + 9)\).  Find functions \(a,b,c\) such that \(f(x) = (a\circ b\circ c)(x)\)
+		\end{ex}
+			\vs{1}
+		
+		\begin{ex}
+			Given \(f(x) = x^2 + x -1\) and \(g(x) = 2-x\), what is the equation of \(y =(f\circ g)(x)\)?
+		\end{ex}
+			\vs{1}
+			
+	\subsection*{Types of Functions}	
+		\begin{defn}[Polynomial]
+			A function \(P\) is called a \textbf{polynomial} if \\ \vspace{.5in}
+				where \(n\) is \blank{3} and the numbers \(a_i\) are constants, called \\ \vspace{15pt} \blank{2}.  The \emph{degree} of the polynomial is  \blank{2} \\ \vspace{15pt} \blank {3.5}.
+		\end{defn}
+		
+		\begin{flushleft}
+	 		\tabulinesep = 2mm	 	
+	 		\setlength{\arrayrulewidth}{1.5pt}	
+	 		\begin{tabu}{| X[.5,c] | X[1,c] | X[c] | X[c] |}\hline 
+	 			\multicolumn{4}{|c|}{{\large \textbf{Common Polynomials}}} \\ \hline
+	 			
+	 			\textbf{Polynomial} 	& \textbf{Equation}	& \textbf{Graph} (\(a_n > 0\))	& \textbf{Graph} (\(a_n < 0\)) \\ \hline 
+	 								& & & \\
+				Linear				& & &  \\ 
+									& & &  \\
+									& & & \\ \hline
+									& & & \\
+				Quadratic			& & &  \\ 
+									& & &  \\
+		 							& & & \\ \hline
+		 							& & & \\
+		 		Cubic				& & & \\ 
+		 							& & &  \\
+		 							& & & \\ \hline
+		 							& & & \\
+		 		Even Degree			& & & \\ 
+		 							& & &  \\
+		 							& & & \\ \hline
+		 							& & & \\
+		 		Odd Degree			& & & \\ 
+		 							& & &  \\
+		 							& & & \\ \hline
+		 	\end{tabu}
+	 	\end{flushleft}
+	 	
+		\begin{flushleft}
+			\tabulinesep = 3mm
+			\setlength{\arrayrulewidth}{1.5pt}	
+	 		\begin{tabu}{| X[1,c]  X[1,c]  X[1,c] | X[1.5,c,p] |} \hline
+	 			\multicolumn{4}{|c|}{\large{\textbf{Basic Trigonometric Functions}}}\\ \hline
+	 			&&&\multirow{5}{*}{
+	 				\begin{tikzpicture}[scale = .9]
+ 						\coordinate (one) at (0,0);
+ 						\coordinate (two) at (4,3); 
+ 						\coordinate (three) at (4,0);
+						\draw (one)--(two) node[midway, yshift = 9pt, sloped] {hyp};
+						\draw (two)--(three) node[midway, xshift = 14pt, yshift = -6pt] {opp};
+						\draw (three)--(one) node[midway, yshift = -9pt] {adj};
+						\draw (.75,0) node[yshift = 5pt] {\(x\)};
+					\end{tikzpicture}
+					} \\
+	 			\(\sin x = \hspace*{20pt}\) & \(\cos x = \hspace*{20pt}\) & \(\tan x = \hspace*{30pt} \)	& \\
+	 			 & & & \\
+				\(\csc x = \hspace*{20pt}\) & \(\sec x = \hspace*{20pt}\)& \(\cot x = \hspace*{30pt}\) & \\ 
+				&&& \\ \hline
+	 		\end{tabu}
+		\end{flushleft}
+			\vs{1}
+			
+		Here are some useful properties of trigonometric functions:
+		\begin{flushleft}
+				\tabulinesep = 2mm
+				\setlength{\arrayrulewidth}{1.5pt}
+				\begin{tabu}{| X[.78,c] | X[c] | X[c] | X[1.2,c] | X[c] | X[1.4,c] | X[1.4,c] | } \cline{2-7}
+					\multicolumn{1}{c|}{} & \(\sin x\) 		& \(\cos x\) 			& \(\tan x\) 											& \(\cot x\)							& \(\sec x\)											  & \(\csc x\) \\ \hline
+										&  &  	&  	&   	&   &  \\
+					\textbf{Domain}		&  &  	&  	&   	&   &  \\ 
+										&  &  	&  	&   	&   &  \\ \hline
+										&  &  	&  	&   	&   &  \\
+					\textbf{Range}		&  & 	& 	& 	&   &  \\ 
+										&  &  	&  	&   	&   &  \\ \hline
+										&  &  	&  	&   	&   &  \\
+					\textbf{Period}		&  & 	& 	& 	&   &  \\ 
+										&  &  	&  	&   	&   &  \\ \hline
+				\end{tabu}
+			\end{flushleft}
+				\vs{1}
+			\newpage
+			
+		Knowing the values of the unit circle will make your life much easier; fill it out below.
+
+			\begin{tikzpicture}[scale=5.3,cap=round,>=latex]
+			        % draw the coordinates
+			        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {\(x\)};
+			        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {\(y\)};
+			
+			        % draw the unit circle
+			        \draw[thick] (0cm,0cm) circle(1cm);
+			
+			        \foreach \x in {0,30,...,360} {
+			                % lines from center to point
+			                \draw[gray] (0cm,0cm) -- (\x:1cm);
+			                % dots at each point
+			                \filldraw[black] (\x:1cm) circle(0.4pt);
+			                % draw each angle in degrees
+					\fill[white] (\x:0.4cm) circle (0.12);
+			        }
+			        
+			        \foreach \x in {45,135,225,315} {
+			        	% lines from center to point
+			                \draw[gray] (0cm,0cm) -- (\x:1cm);
+			                % dots at each point
+			                \filldraw[black] (\x:1cm) circle(0.4pt);
+			                % draw each angle in degrees
+					\fill[white] (\x:0.4cm) circle (0.12);
+			        }
+			
+			        % draw each angle in radians
+			        \foreach \x/\xtext in {
+			            30/\frac{\pi}{6},
+			            45/\frac{\pi}{4},
+			            60/\frac{\pi}{3},
+			            90/\frac{\pi}{2},
+			            120/\frac{2\pi}{3},
+			            135/\frac{3\pi}{4},
+			            150/\frac{5\pi}{6},
+			            180/\pi,
+			            210/\frac{7\pi}{6},
+			            225/\frac{5\pi}{4},
+			            240/\frac{4\pi}{3},
+			            270/\frac{3\pi}{2},
+			            300/\frac{5\pi}{3},
+			            315/\frac{7\pi}{4},
+			            330/\frac{11\pi}{6},
+			            360/2\pi}
+			                \fill[white] (\x:0.8cm) circle (0.12);
+
+				\foreach \x/\xtext/\y in {
+			            % the coordinates for the first quadrant
+	    			    30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+			     		45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+			            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+			            % the coordinates for the second quadrant
+			            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+			            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+			            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+			            % the coordinates for the third quadrant
+			            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+			            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+			            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+			            % the coordinates for the fourth quadrant
+			            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+			            315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+			            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+			                \draw (\x:1.25cm) node[fill=white] {};
+			
+			        % draw the horizontal and vertical coordinates
+			        % the placement is better this way
+			        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+			              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+			              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+			              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+	   	 \end{tikzpicture}
+	    	\newpage
+	    	
+		\begin{rmk}[Common Trig Identities]
+			\\[75pt]
+		\end{rmk}
+		\begin{ex}
+			Sketch the graph of each trig function over one period.  If necessary, sketch any asymptotes the graph has.
+		\end{ex}
+			\vs{2}
+			
+		\begin{ex}
+			Find the domain of the function \(f(x) = \dfrac{3}{2\sin x + 1}\), first on the interval \([0,2\pi)\), then in general.
+		\end{ex}
+			\vs{1}
+			\newpage
+
+	\subsection*{Algebra}
+		\begin{rmk}[Average Rate of Change/Slope]
+			Given two points \((x_1,y_1)\) and \((x_2,y_2)\), where \(y_i = f(x_i)\), the slope of the line between the points (also called the average rate of change between the two points) is given by
+			\\[50pt]
+		\end{rmk}
+		
+		\begin{rmk}[Forms of Lines]
+			Consider a line passing through the point \((x_1,y_1)\) with slope \(m\). In \textbf{point-slope form}, the line can be written as\\[75pt]
+			
+			If the line has a known \(y-\)intercept at \((0,b)\), then in \textbf{slope-intercept form}, the line can be written as\\[50pt]
+		\end{rmk}
+		
+		\begin{ex}
+			Consider the points \((11,-4)\) and \((-4,5)\). 
+			\begin{enumerate}[(a)]
+				\item Find the slope of the line between the two points.
+					\vs{1}
+					
+				\item Write the line in point-slope and slope-intercept forms.
+					\vs{1}					
+			\end{enumerate}
+		\end{ex}
+			\newpage
+			
+		
+		\begin{rmk}[Quadratic Formula]
+			For any polynomial of the form \(f(x) = ax^2 + bx + c\), the roots/zeros/\(x-\)intercepts of \(f\) are located at\\[75pt]
+		\end{rmk}
+		
+		\begin{ex}
+			For each polynomial, describe the end behavior of \(f(x)\) as \(x\to \pm \infty\), find all zeros of \(f\), and sketch a graph of \(f\).
+			\begin{enumerate}[(a)]
+				\item \(f(x) = -2x^2+4x-1\)
+					\vs{1}
+					
+				\item \(f(x) = x^3-3x^2-4x\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}	
+			\newpage
+			

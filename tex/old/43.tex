@@ -1,0 +1,239 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{4.3 - Maxima and Minima}
+	\setcounter{section}{2}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs43}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 4.3}
+	
+\section*{Maxima and Minima}\label{cs43}
+	\subsection*{Before Class}
+	\subsubsection*{Definitions}
+		\begin{defn}[Absolute (Global) Extrema]
+			Let \(c\) be a number in the domain \(D\) of a function \(f\).  Then, \(f(c)\) is the \textbf{absolute maximum}\vspace{15pt} value of \(f\) on \(D\) if \blank{3.5}; \(f(c)\) is the \textbf{absolute}\vspace{15pt} \textbf{minimum} value of \(f\) on \(D\) if \blank{3.5}.\\ \\
+				Absolute maxima and minima are also called \blank{1.5} maxima/minima (or extrema).
+		\end{defn}
+		
+		\begin{ex}
+				Below are two graphs.  Identify their absolute maxima/minima, if any exist.  Justify your responses.
+			\end{ex}\\
+			\begin{minipage}{3in}
+				\begin{tikzpicture}
+					\begin{axis}[
+						every tick label/.append style={font=\small},
+						axis x line = middle,
+						axis y line = middle,
+			    			every axis y label/.style={at={(ticklabel cs:1.15)}},
+			    			%ytick = {-4, -2, -3, -1, 1, 2, 3, 4},
+						y label style={at={(axis description cs:.5,1.15)},anchor=north},
+			    			ylabel = {$f(x)$},
+		    				every axis x label/.style= {at ={(ticklabel cs:1)}},
+		    				%xtick = {-4,-3,-2,-1,1,2,3,4},
+		    				x label style={at={(axis description cs:1.1,.5)},anchor=east},
+		    				xlabel = {$x$},
+		    				xmin = -2.2, xmax = 2.2
+					]
+						\addplot[<->,thick, samples = 100, smooth, domain = -2:2] {x^2-2};
+					\end{axis}
+				\end{tikzpicture}
+			\end{minipage}
+			\begin{minipage}{3.4in}
+				\begin{flushright}
+				\begin{tikzpicture}
+					\begin{axis}[
+						every tick label/.append style={font=\small},
+						axis x line = middle,
+						axis y line = middle,
+			    			every axis y label/.style={at={(ticklabel cs:1.15)}},
+			    			%ytick = {-4, -2, -3, -1, 1, 2, 3, 4},
+						y label style={at={(axis description cs:.5,1.15)},anchor=north},
+			    			ylabel = {$f(x)$},
+			    			ymin = -1.1, ymax = 1.1,
+		    				every axis x label/.style= {at ={(ticklabel cs:1)}},
+		    				xtick = {-6.28, -3.14, 0, 3.14, 6.28},
+		    				x label style={at={(axis description cs:1.1,.5)},anchor=east},
+		    				xticklabels = {$-2\pi$,$-\pi$,0,$\pi$, $2\pi$},
+		    				xlabel = {$x$},
+		    				xmin = -7.7, xmax = 7.7
+					]
+						\addplot[<->,thick, samples = 100, smooth, domain = -7.5:7.5] {cos(deg(x))};
+					\end{axis}
+				\end{tikzpicture}
+				\end{flushright}
+			\end{minipage}
+				\newpage
+				
+		\begin{defn}[Local Max/Min]
+			The number \(f(c)\) is a \textbf{local maximum} value of \(f\) if \blank{2.5}.  \(f(c)\)\\[15pt] is a \textbf{local minimum} value of \(f\) if \blank{3}.
+		\end{defn}
+		
+		\begin{ex}
+			Estimate the inputs of any local or absolute extrema.
+			\begin{flushleft}
+				\begin{tikzpicture}
+					\begin{axis}[
+						every tick label/.append style={font=\small},
+						axis x line = middle,
+						axis y line = middle,
+			    			every axis y label/.style={at={(ticklabel cs:1.15)}},
+			    			%ytick = {-4, -2, -3, -1, 1, 2, 3, 4},
+						y label style={at={(axis description cs:.47,1.15)},anchor=north},
+			    			ylabel = {$f(x)$},
+		    				every axis x label/.style= {at ={(ticklabel cs:1)}},
+		    				%xtick = {-4,-3,-2,-1,1,2,3,4},
+		    				x label style={at={(axis description cs:1.1,.1)},anchor=east},
+		    				xlabel = {$x$},
+		    				xmin = -1.5, xmax = 2
+					]
+						\addplot[<->,thick, samples = 100, smooth, domain = -1.4:1.9] {6*x^4-6*x^3-5*x^2+5*x-1};
+					\end{axis}
+				\end{tikzpicture}
+			\end{flushleft}
+		\end{ex}
+			\vs{1}
+
+		\begin{question}
+			Are local extrema automatically absolute extrema?  Are absolute extrema automatically local extrema?
+		\end{question}
+			\vs{1}
+			
+		\begin{ex}
+			Identify any local maxes, local mins, absolute maxes, or absolute mins on the graph below.\\
+			\includegraphics[scale = .75]{4.3fig1}
+		\end{ex}
+			\newpage		
+		
+	\subsubsection*{Important Results}
+		\begin{thm}[Extreme Value Theorem]
+			If \(f\) is \blank{1.5} on a closed interval \([a,b]\), then \blank{2.3}\vspace{20pt} \blank{5}.
+		\end{thm}
+		
+		\begin{question}
+			Why does the extreme value theorem fail on an open interval?  
+		\end{question}
+			\vs{1}
+			
+		\begin{thm}[Fermat's Theorem]
+			If \blank{6.5}\vspace{10pt} then \(f'(c) = 0\).
+		\end{thm}
+		
+		\begin{question}
+			Is it true that if $f'(c) = 0$, then $f$ has a local max or min at $c$?
+		\end{question}
+			\vs{1}
+			\newpage
+	
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Give the coordinates for the absolute and local extrema for the function given below.\\
+			\includegraphics[scale = 1.25]{4.3fig2}
+		\end{ex}
+			\vs{.25}
+			
+		\begin{ex}
+			Sketch the graph of a function that has two local maxima, one local minimum, and no absolute minimum.
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Can we apply Fermat's Theorem to the function $f(x) = |x|$ on the interval $[-5,5]$?  Why or why not? 
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Can we apply the Extreme Value Theorem to the function $f(x) = |x|$ on the interval $[-5,5]$?  Why or why not?
+		\end{ex}
+			\vs{1}	
+			\newpage
+			
+	\subsection*{In Class}
+	\subsubsection*{Critical Numbers}
+		\begin{defn}[Critical Number/Value/Point]
+			A \textbf{critical number} of a function \(f\) is a number \(c\) in the domain of \(f\) such that\vspace{20pt} \blank{5}.  A \textbf{critical value} is\vspace{20pt} \blank{4}.  A \textbf{critical point} is the coordinate\\ \vspace{5pt} pair  \blank{2}.
+		\end{defn}
+		
+		\begin{ex}
+			Find the critical number(s) of \(f(x) = x^3 -3x^2 + 1\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find the critical numbers of \(f(t) = t^4 + t^3+t^2 + 1\).
+		\end{ex}
+			\vs{1}
+			\newpage
+		\begin{ex}
+			For some function \(f(x)\), its derivative is given by \(f'(x) = \dfrac{100(x-2)^2}{5-x^2}\).  How many critical numbers does \(f\) have?  What are they?
+		\end{ex}	
+			\vs{1}
+			
+		\begin{ex}
+			Find the critical numbers of \(f(x) = \cos x\).
+		\end{ex}
+			\vs{1.5}
+	
+	\subsubsection*{Finding Absolute Maxima \& Minima}
+		In order to find \emph{absolute} extrema on closed intervals, we need to find local extrema and compare the values against the endpoints.  So, finding absolute maxima and minima comes down to the following process:\\
+			\begin{enumerate}
+			\setlength\itemsep{25pt}
+				\item 
+				\item
+				\item
+				\item
+			\end{enumerate}
+			\vs{.5}
+			\newpage
+		
+		\begin{ex}
+			Locate the absolute extrema for \(f(x) = x^3 -3x^2+1\) on the interval \(\left[\dfrac{1}{2},4\right]\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Locate the absolute extrema for \(f(x) = \sin x\) on the interval \([-2\pi,2\pi]\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Locate the absolute extrema for the function \(f(t) = (t^2-4)^3\) on \([-3,3]\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Locate the absolute extrema of the function \(f(x) = x + \dfrac{1}{x}\) on \([0.2,4]\).
+		\end{ex}
+			\vs{1}	
+			
+		\begin{ex}
+			If \(f(x) = 3x^4 - 4x^3 - 12x^2 + 1\), find the absolute maximum and absolute minimium on the interval \([-2,3]\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{After Class Practice}
+		\begin{ex}
+			Find the critical numbers of the function \(h(p) =\dfrac{p-1}{p^2+4}\)
+		\end{ex}
+			\vs{1}
+		\begin{ex}
+			If \(a,b\) are positive integers, find the maximum value of \(f(x) = x^a(1-x)^b\), for \(0\leq x\leq 1\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Find the absolute maximum and absolute minimum of the function \(f(x) = x\sqrt{3-x}\) on \([-6,3]\).
+		\end{ex}	
+			\vs{1}
+			
+		\begin{ex}
+			Sketch the graph of a function with two local maxima, one local minimum, and no absolute minimum.
+		\end{ex}
+			\vs{1}
+
+\clearpage
+\end{document}

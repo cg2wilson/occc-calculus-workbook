@@ -1,0 +1,149 @@
+\documentclass[notes]{subfiles}
+
+\begin{document}
+	\addcontentsline{toc}{section}{3.8 - Implicit Differentiation}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \large\nameref{cs38}} 
+	\fancyhead[LO,RE]{\bfseries \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[RO,LE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[LO,RE]{\large Chapter 3.8}
+	
+\section*{Implicit Differentiation}\label{cs38}
+	\subsection*{Before Class}
+	\subsubsection*{The Idea}
+		\begin{ex}
+			Recall that the chain rule is necessary in order to take the derivative of a composition of functions. Use the chain rule to find the derivative of the expression \([f(x)]^3 + x = f(x)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Consider the equation \(x^2 + y^2 = 1\).
+			\begin{enumerate}[(a)]
+				\item \(x^2 + y^2 = 1\) is called an \emph{implicit equation}.  Why is this considered implicit and not \emph{explicit}?
+					\vs{.75}
+					
+				\item Write \(x^2 + y^2 = 1\) in an explicit form.
+					\vs{.5}
+					
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Consider the circle of radius 4, centered at the origin, given by the implicit equation \(x^2 + y^2 = 16\).
+			\begin{enumerate}[(a)]
+				\item Rewrite the equation using that \(y = y(x)\) (that is, \(y\) is a function of \(x\))
+					\vs{.5}
+					\newpage
+					
+				\item Why would we need to use the chain rule in order to take this derivative?  
+					\vs{.5}
+					
+				\item Take the derivative of both sides, using \(\dfrac{dy}{dx}\) for the derivative of \(y(x)\)
+					\vs{1}
+					
+				\item Find \(\dfrac{dy}{dx}\).
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Use implicit differentiation to find \(y'\) for the implicit equation \(x^3 + y^3 = x\)
+		\end{ex}	
+			\vs{2}
+			\newpage
+
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			\begin{enumerate}[(a)]
+				\item Find \(\dfrac{dy}{dx}\) for the equation \(\sqrt{x} + \sqrt{y} = 4\), and find the slope of the tangent line at the point \((2,2)\)
+					\vs{1}
+					
+				\item Use your answer in (a) to write an equation for the tangent line to the curve at the point $(2,2)$.
+					\vs{1}
+					
+				\item If \(x\) is a function of \(y\) instead, find \(\dfrac{dx}{dy}\), and use this to find the slope of the tangent line at the point \((2,2)\). What happens to your answer? Why?
+					\vs{2}
+			\end{enumerate}
+		\end{ex}	
+			\newpage
+	
+	\subsection*{In Class}		
+	\subsubsection*{Examples}
+		\begin{ex} \( \)
+			\begin{enumerate}[(a)] 
+				\item Find the derivative of \(x^2 + 2y^2 = 9\) at the point \((1,2)\).
+					\vs{1}
+					
+				\item Find the equation of the tangent line to the curve at this point.
+					\vs{1}
+					
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Find all points where the tangent line to the curve $x^4 + y^4 = 16$ is horizontal.
+		\end{ex}
+			\vs{2}
+			\newpage
+			
+		\begin{ex}
+			Find \(y'\), if \(\sin (x-y) = y^2\cos x\)
+		\end{ex}
+			\vs{2}
+			
+		\begin{ex}
+			Find \(y'\), if \(\dfrac{x^2}{x+y} = y^2 + 1\)
+		\end{ex}
+			\vs{2}
+			\newpage
+			
+		\begin{ex}
+			Find \(\dfrac{dy}{dx}\) if $\sqrt{xy} = 1 + x^2y\)
+		\end{ex}
+			\vs{1.5}
+			
+		\begin{ex}
+			Find the equation of the tangent line to the curve \(y\sin 2x = x\cos 2y\) at the point \(\lrpar{\dfrac{\pi}{2},\dfrac{\pi}{4}}\).
+		\end{ex}
+			\vs{1}
+
+		\begin{ex}
+			Find \(\dfrac{dy}{dx}\) for the equation \(xy = \sqrt{x^2+y^2}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Find \(y''\), if \(x^2 + 4y^2 = 4\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find \(y''\) if \(\sin y + \cos x = 1\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{After Class Practice}
+		\begin{ex}
+			If \(f(x) + x^2[f(x)]^3 = 10\) and \(f(1) = 2\), find \(f'(1)\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If \(x^2 + xy + y^3 = 1\), find the value of \(y''\) at input \(x = 1\).
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{ex}
+			Show that the tangent line to the ellipse 
+				\[\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\]
+			at the point $(x_0,y_0)$ can be written as
+				\[\dfrac{xx_0}{a^2} + \dfrac{yy_0}{b^2} = 1\]
+		\end{ex}
+			\vs{2}
+
+	\clearpage
+\end{document}

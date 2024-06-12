@@ -1,0 +1,212 @@
+\documentclass[notes]{subfiles}
+\begin{document}
+	\addcontentsline{toc}{section}{4.8 - L'Hospital's Rule}
+	\refstepcounter{section}
+	\fancyhead[RO,LE]{\bfseries \nameref{cs48}} 
+	\fancyhead[LO,RE]{\bfseries \small \currentname}
+	\fancyfoot[C]{{}}
+	\fancyfoot[LO,RE]{\large \thepage}	%Footer on Right \thepage is pagenumber
+	\fancyfoot[RO,LE]{\large Chapter 4.8}
+	
+\section*{L'Hospital's Rule}\label{cs48}
+	\subsection*{Before Class}
+	\subsubsection*{The Rule}
+		\begin{question}
+			The Direct Substitution Rule says that if \(f\) is a polynomial or rational function, and \(a\) is in the domain of \(a\), then \(\ds \lim_{x\to a} f(x) = f(a)\).
+			\begin{enumerate}[(a)]
+				\item Consider this limit: \(\ds \lim_{x\to 2} \dfrac{x^2-4}{x-2}\).  Why can we not use the Direct Substitution Property?
+					\vs{.5}
+					
+				\item Rewrite the function so that you \emph{can} use Direct Substitution, and then find the limit.
+					\vs{.5}
+			\end{enumerate}
+		\end{question}
+		
+		\begin{defn}[Indeterminate Form (Type \(0/0\) and \(\infty/\infty\))]
+			An \textbf{indeterminate form} is a limit of the form \(\ds \lim_{x\to a} \dfrac{f(x)}{g(x)}\), where either \blank{1.5}\\[20pt] \blank{2} or \blank{3.5}.
+		\end{defn}
+		
+		\begin{ex}
+			Each limit below is an indeterminate form.  Classify it as Type \(0/0\) or Type \(\infty/\infty\).
+			\begin{enumerate}[(a)]
+				\item \(\ds\lim_{x\to 1} \dfrac{\ln x}{x - 1}\)
+					\vs{.5}
+				\item\(\ds \lim_{x\to \pi/2^-} \dfrac{\sec x}{1+\tan x}\)
+					\vs{.5}
+				\item \(\ds \lim_{x\to \infty} \dfrac{e^x}{x^2}\)
+					\vs{.5}
+			\end{enumerate}
+		\end{ex}
+			\newpage
+		
+		\begin{rmk}[l'Hospital's Rule]
+			Let \(f\) and \(g\) be differentiable functions such that \(g'(x)\neq 0\) on an open interval \(I\) that contains \(a\) (except possibly at \(a\)).  Suppose that the limit creates an indeterminate form of Type \(0/0\) or \(\infty/\infty\).  Then, \\ \\ \\ \\ \\
+			
+			if the limit on the right side exists, or is \(\pm \infty\).
+		\end{rmk}
+		
+		\begin{ex}
+			Use l'Hospital's Rule to compute the limits:
+			\begin{enumerate}[(a)]
+				\item\(\ds\lim_{x\to 1} \dfrac{\ln x}{x - 1}\)
+					\vs{1}
+				\item \(\ds \lim_{x\to \pi/2^-} \dfrac{\sec x}{1+\tan x}\)
+					\vs{1}
+				\item \(\ds \lim_{x\to \infty} \dfrac{e^x}{x^2}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+		\begin{ex}
+			Show that \(\ds \lim_{x \to 0} \dfrac{\tan x - x}{x^3} = \dfrac{1}{3}\)
+		\end{ex}
+			\vs{2}
+			\newpage
+
+	\subsection*{Pre Class Practice}
+		\begin{ex}
+			Compute these limits; you may or may not need l'Hospital's Rule.  
+			\begin{enumerate}[(a)]
+				\item \(\ds \lim_{x\to -2} \dfrac{x^3+8}{x+2}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to (\pi/2)^+} \dfrac{\cos x}{1-\sin x}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to \pi^-} \dfrac{\sin x}{1-\cos x}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{u\to \infty} \dfrac{e^{u/10}}{u^3}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		\newpage
+
+	\subsection*{In Class}
+	\subsubsection*{Other Indeterminate Forms}
+		\begin{defn}[Indeterminate Form (Type \(0\cdot \infty\))]
+			An \textbf{indeterminate form of type} \(0\cdot \infty\) is a limit of the form \(\ds \lim_{x\to a} f(x)g(x)\), where\\[20pt] \blank{5}.
+		\end{defn}
+		
+		\begin{rmk}[Handling Type \(0\cdot \infty\) Indeterminate Forms]
+			\\[40pt]
+		\end{rmk}
+		
+		\begin{ex}
+			Find \(\ds\lim_{x\to 0^+} x\ln x\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Evaluate \(\ds\lim_{x\to \infty} x\sin\lrpar{\dfrac{\pi}{x}}\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Show that \(\ds \lim_{x\to (\pi/2)^-} \cos x\sec 5x = \dfrac{1}{5}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+		
+		\begin{defn}[Indeterminate Form (Type \(\infty - \infty\))]
+			An \textbf{indeterminant form of type} \(\infty - \infty\) is a limit of the form \(\ds \lim_{x\to a}[f(x) - g(x)]\), where\\[20pt] \blank{5}.
+		\end{defn}	
+		
+		\begin{ex}
+			Compute \(\ds \lim_{x\to (\pi/2)^-} (\sec x - \tan x)\)
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find \(\ds \lim_{x\to 1} \lrpar{\dfrac{x}{x-1} -\dfrac{1}{\ln x}}\)
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+		\begin{defn}[Indeterminate Form (Types \(0^0,\infty^0,1^\infty\))]
+			Consider the limit \(\ds \lim_{x\to a} [f(x)]^{g(x)}\).  This is an \textbf{indeterminate form of}: \\
+			\begin{itemize}
+				\setlength\itemsep{30pt}
+				\item Type \(0^0\) if \blank{5}.
+				\item Type \(\infty^0\) if \blank{5}.
+				\item Type \(1^\infty\) if \blank{5}.
+			\end{itemize}
+		\end{defn}
+		
+		\begin{rmk}[Handling Indeterminate Powers]
+			\\[40pt]
+		\end{rmk}
+		
+		\begin{ex}
+			Compute \(\ds \lim_{x\to 0^+} (1-\sin 2x)^{\cot x}\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			Find \(\ds \lim_{x\to 0^+} x^x\)
+		\end{ex}
+			\vs{.5}
+			\newpage
+		
+	\subsection*{Examples}	
+		\begin{ex}
+			Find the limits:
+			\begin{enumerate}[(a)]
+				\item \(\ds \lim_{x\to \infty} \dfrac{(\ln x)^2}{x}\)
+					\vs{1}
+					
+				\item \(*\ds \lim_{x\to 1^+} \ln x\tan\lrpar{\dfrac{\pi x}{2}}\)
+					\vs{1}
+
+				\item \(\ds \lim_{x\to 0^+} \lrpar{\dfrac{1}{x} - \dfrac{1}{e^x-1}}\)
+					\vs{1}
+					\newpage
+					
+				\item \(\ds \lim_{x\to 0^+} \lrpar{\dfrac{1}{x} -\dfrac{1}{\inv{\tan}(x)}}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to 0^+} (\tan 2x)^x\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to \infty} x^{e^{-x}}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}	
+			\newpage
+			
+		\begin{ex}
+			The equation of the tangent line to \(f(x)\) at the point \((2,0)\) is \(1.5x-3\), and the equation of the tangent line to \(g(x)\) at \((2,0)\) is \(2-x\).  What is \(\ds \lim_{x\to 2} \dfrac{f(x)}{g(x)}\)?  
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			If \(f'\) is continuous, \(f(2) = 0\), and \(f'(2) = 7\), then find \(\ds \lim_{x\to 0} \dfrac{f(2+3x) + f(2+5x)}{x}\).
+		\end{ex}
+			\vs{1}
+			
+		\begin{ex}
+			For what values of \(a\) and \(b\) is the equation \(\ds \lim_{x\to 0} \lrpar{\dfrac{\sin 2x}{x^3} + a + \dfrac{b}{x^2}} = 0\) true?
+		\end{ex}
+			\vs{1}
+			\newpage
+			
+	\subsection*{After Class Practice}
+		\begin{ex}
+			Compute the limits:
+			\begin{enumerate}[(a)]
+				\item \(\ds \lim_{x\to 0} \dfrac{\inv{\sin}(x)}{x}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to 0} \dfrac{\ln (1+x)}{\cos x + e^x - 1}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to -\infty} x\ln\lrpar{1 - \dfrac{1}{x}}\)
+					\vs{1}
+					
+				\item \(\ds \lim_{x\to 0^+} (\sin 3x + 1)^{1/x}\)
+					\vs{1}
+			\end{enumerate}
+		\end{ex}
+		
+\clearpage
+\end{document}
